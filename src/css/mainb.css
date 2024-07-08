@@ -1,0 +1,143 @@
+section{padding-top: 65px !important;}
+
+    .je_Mainswiper {
+        background-color: #F7F8FA;
+        height: 700px;}
+
+        .mainbannerLeft {
+            padding: 160px 48px 84px 85px;
+        }
+        .mainbanner_Video,
+        .main_back,
+        .maincollabo {
+            position: relative;
+            border-radius: 350px 0 0 0;
+            border: none;
+            right: 0;
+            bottom: 0;
+            float: none;
+        }
+
+        .main_back {
+            background-image: url('//hyunjiq.github.io//petopia/img/img_je/main_littledog.jpg');
+            border-radius: 350px 0 0 0;
+            border: none;
+            background-size: contain;
+            background-repeat: no-repeat;
+            padding: 0;
+            margin: 0;
+            width: 1242px;
+            height: 700px;
+            box-sizing: border-box;
+        }
+
+        .mainbannerText_en {
+            font-family: Quicksand;
+            line-height: 70px;
+            color: #3D71FF;
+            font-weight: bold;
+            font-size: 65px;
+        }
+        .mainbannerText_kr {
+            font-family: Noto+Sans+KR;
+            line-height: 23px;
+            color: #3D71FF;
+            font-size: 20px;
+        }
+        .mainbannerText {
+            white-space: nowrap;
+            font-family: Noto+Sans+KR;
+            line-height: 51px;
+            font-weight: bold;
+            color: #3D71FF;
+            font-size: 2.8rem;
+        }
+        .mainActing,
+        .mainvideo {
+            text-decoration: none;
+            color: #ffff;
+            background-color: #6A92FE;
+            border-radius: 30px;
+            padding: 1rem;
+            width: 212px;
+            height: 58px;
+        }
+        .mainvideo {
+            padding: 1rem;
+        }
+        .mainbanner_text {
+            font-family: Noto+Sans+KR;
+            font-size: 16px;
+            line-height: 19px;
+            color: #666666;
+        }
+        .swiper-pagination {
+            position: absolute;
+            text-align: center;
+            transition: .3s opacity;
+            transform: translate3d(0, 0, 0);
+            z-index: 10;}
+            @media (max-width: 1200px) {
+                #je_Mainswiper {
+                    height: 600px; /* 높이 조정 */
+                    .main_back {
+                        width: 1000px; /* 너비 조정 */
+                        height: 600px; /* 높이 조정 */
+                    }
+                    .mainbannerText_en {
+                        font-size: 50px; /* 폰트 크기 조정 */
+                    }
+                    .mainbannerText {
+                        font-size: 2.5rem; /* 폰트 크기 조정 */
+                    }
+                }
+            }
+            
+            @media (max-width: 992px) {
+                #je_Mainswiper {
+                    height: 500px; /* 높이 조정 */
+                    .main_back {
+                        width: 800px; /* 너비 조정 */
+                        height: 500px; /* 높이 조정 */
+                    }
+                    .mainbannerText_en {
+                        font-size: 40px; /* 폰트 크기 조정 */
+                    }
+                    .mainbannerText {
+                        font-size: 2rem; /* 폰트 크기 조정 */
+                    }
+                }
+            }
+            
+            @media (max-width: 768px) {
+                #je_Mainswiper {
+                    height: 400px; /* 높이 조정 */
+                    .main_back {
+                        width: 600px; /* 너비 조정 */
+                        height: 400px; /* 높이 조정 */
+                    }
+                    .mainbannerText_en {
+                        font-size: 30px; /* 폰트 크기 조정 */
+                    }
+                    .mainbannerText {
+                        font-size: 1.8rem; /* 폰트 크기 조정 */
+                    }
+                }
+            }
+            
+            @media (max-width: 576px) {
+                #je_Mainswiper {
+                    height: 300px; /* 높이 조정 */
+                    .main_back {
+                        width: 100%; /* 너비 조정 */
+                        height: 300px; /* 높이 조정 */
+                    }
+                    .mainbannerText_en {
+                        font-size: 20px; /* 폰트 크기 조정 */
+                    }
+                    .mainbannerText {
+                        font-size: 1.5rem; /* 폰트 크기 조정 */
+                    }
+                }
+            }
+            

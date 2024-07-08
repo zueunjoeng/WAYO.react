@@ -1,0 +1,42 @@
+@charset "UTF-8";
+body {
+  font-family: "Quicksand", "Noto Sans KR", sans-serif !important;
+  font-weight: 400;
+}
+body a {
+  text-decoration: none;
+  color: #333333;
+}
+body li {
+  list-style: none;
+}
+body h2 {
+  font-family: "Quicksand", "Noto Sans KR";
+  color: #333333;
+  font-size: 2rem;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  body .margin {
+    margin-top: 120px; /* 화면 너비가 768px 이하일 때 조절 */
+  }
+  body h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  body .margin {
+    margin-top: 80px; /* 화면 너비가 576px 이하일 때 조절 */
+  }
+  body h2 {
+    font-size: 1rem;
+  }
+}
+
+.w1920 {
+  max-width: 1920px !important;
+}
+
+.margin {
+  margin-top: 180px;
+}
