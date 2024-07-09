@@ -1,0 +1,24 @@
+{
+
+   "hcls" : "mainbannerText",
+   "enhcls" : "mainbannerText_en",
+   "krhcls" : "mainbannerText_kr",
+
+   "banner01":[
+        {
+            "text": []
+        }
+    
+    ],
+    "banner02":[
+        {
+
+        }
+    ],
+    "banner03":[
+        {
+
+        }
+    ]
+    
+}

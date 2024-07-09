@@ -1,0 +1,64 @@
+{
+    "swiper" : [
+        {
+            "cls" : ["swiper-slide", "slide-overlay", "sp_text"],
+            "text" : "유기견 봉사활동",
+            "src" : "/img/sp_volunteer.jpg"
+        },
+        {
+            "cls" : ["swiper-slide", "slide-overlay", "sp_text"],
+            "text" : "배우 김효진x와요 특별한 인터뷰",
+            "src" : "/img/sp_interview.jpg"
+        },
+        {
+            "cls" : ["swiper-slide", "slide-overlay", "sp_text"],
+            "text" : "유기동물 보호소 산책봉사",
+            "src" : "/img/sp_walkingvolunteer.jpg"
+        }
+        ],
+
+    "schedule": [
+      {
+        "href" :"javascript:void(0)",
+        "date": "2024.03.12",
+        "event": "국제 강아지의 날 봉사활동자 모집",
+        "cls": [
+            "libox ps-4 d-flex justify-content-between align-items-center",
+            "sp-text",
+            "me-5 sp-style",
+            "px-2" ]
+       
+      },
+      {
+        "date": "2024.04.06",
+        "event": "서울시 유기견 보호소 봉사활동",
+        "cls": [
+            "libox ps-4 d-flex justify-content-between align-items-center",
+            "sp-text",
+            "me-5 sp-style",
+            "px-2" ]
+        
+      },
+      {
+        "date": "2024.04.28",
+        "event": "반려동물 인식 교육 프로그램 안내",
+        "cls": [
+            "libox ps-4 d-flex justify-content-between align-items-center",
+            "sp-text",
+            "me-5 sp-style",
+            "px-2" ]
+       
+      },
+      {
+        "date": "2024.04.04",
+        "event": "동물 용품 기부에 관한 공지사항",
+        "cls": [
+            "libox ps-4 d-flex justify-content-between align-items-center",
+            "sp-text",
+            "me-5 sp-style",
+            "px-2" ]
+        
+      }
+    ]
+  }
+  
