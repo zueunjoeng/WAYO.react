@@ -19,7 +19,7 @@ section{padding-top: 65px !important;}
         }
 
         .main_back {
-            background-image: url('//hyunjiq.github.io//petopia/img/img_je/main_littledog.jpg');
+            background-image: url('/public/img/mainback_animal.png');
             border-radius: 350px 0 0 0;
             border: none;
             background-size: contain;
@@ -77,6 +77,7 @@ section{padding-top: 65px !important;}
             transition: .3s opacity;
             transform: translate3d(0, 0, 0);
             z-index: 10;}
+            
             @media (max-width: 1200px) {
                 #je_Mainswiper {
                     height: 600px; /* 높이 조정 */

@@ -2,6 +2,7 @@ import React from 'react';
 import socialDB from '../data/socialDB.json'
 import SocialSW from '../component/socialswip'
 import '../css/social.css'
+import {Sociala, Socialspan} from '../commonui/socialui'
 
 function Social() {
 
@@ -34,11 +35,12 @@ function Social() {
                                 socialDB["schedule"].map((e, i)=>{
                                     return(
                                         <li>
-                                            <a href={e.href} className={e.cls[0]}>
-                                                <span className={e.cls[1]}>{e.date}</span>
+                                            <Sociala href={e.href}>
+                                                <Socialspan>{e.date}</Socialspan>
                                                 <span className={e.cls[2]}>{e.event}</span>
                                                 <span className={e.cls[3]}></span>
-                                            </a>
+                                            </Sociala>
+                                        
                                         </li>
                                     )
                                 })
