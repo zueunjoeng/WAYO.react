@@ -1,8 +1,8 @@
 import React from 'react';
 import socialDB from '../data/socialDB.json'
-import SocialSW from '../component/socialswip'
+import Socialswip from '../component/socialswip'
 import '../css/social.css'
-import {Sociala, Socialspan} from '../commonui/socialui'
+import {Socialdiv, Socialul, Sociala, Socialspan01,Socialspan02,Socialspan03} from '../commonui/socialui'
 
 function Social() {
 
@@ -13,9 +13,9 @@ function Social() {
                 <div className="row">
                     <div className="col d-flex p-0 sp_je">
                         {/* <!-- Swiper --> */}
-                        <div className="swiper mySwiper" id="jeSwiper">
+                        <div className="swiper mySwiper jeSwiper">
                             <div class="swiper-wrapper">
-                                <SocialSW></SocialSW>
+                                <Socialswip></Socialswip>
                             </div>
                         </div>
                             {/* <!-- 스와이퍼 이동버튼 --> */}
@@ -25,27 +25,27 @@ function Social() {
                     </div>                    
                     {/* <!-- 프로그램 일정 --> */}
                     <div className="col ps-0 sp_je" >
-                        <div className="d-flex justify-content-between align-items-center px-3 pe-3 box">
+                        <Socialdiv>
                             <h5 className="pt-1">프로그램 일정</h5>
                             <span className="pt-1"><a href="javascript:void(0)"><h6>더보기</h6></a></span>
-                        </div>
+                        </Socialdiv>
                     
-                        <ul className="spNews px-0 pb-0">
+                        <Socialul>
                             {
                                 socialDB["schedule"].map((e, i)=>{
                                     return(
                                         <li>
-                                            <Sociala href={e.href}>
-                                                <Socialspan>{e.date}</Socialspan>
-                                                <span className={e.cls[2]}>{e.event}</span>
-                                                <span className={e.cls[3]}></span>
+                                            <Sociala href="javascript:void(0)">
+                                                <Socialspan01>{e.date}</Socialspan01>
+                                                <Socialspan02>{e.event}</Socialspan02>
+                                                <Socialspan03></Socialspan03>
                                             </Sociala>
                                         
                                         </li>
                                     )
                                 })
                             }
-                        </ul>
+                        </Socialul>
                     </div>
                 </div>
             </div>

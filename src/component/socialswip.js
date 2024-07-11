@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css'; 
 import socialDB from '../data/socialDB.json'
+import {Swieprdiv01,Swieprdiv02} from '../commonui/socialui'
 
 
 const Banner = () => {
@@ -20,9 +21,9 @@ const Banner = () => {
             {
               socialDB["swiper"].map((v, i) => (
                 
-                  <SwiperSlide key={i} className={v.cls[0]}>
-                            <div className={v.cls[1]}></div>
-                            <div className={v.cls[2]}>{v.text}</div>
+                  <SwiperSlide key={i} className="swiper-slide">
+                            <Swieprdiv01></Swieprdiv01>
+                            <Swieprdiv02>{v.text}</Swieprdiv02>
                             <img src={v.src} /> 
                     </SwiperSlide>
                 ))
