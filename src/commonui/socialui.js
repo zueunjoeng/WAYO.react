@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-// export const SocialPro = styled.div`
-// width: 700px;
-// padding-left:0;
-// `;
-
 export const Socialdiv = styled.div`
 display: flex;
 justify-content: space-between;

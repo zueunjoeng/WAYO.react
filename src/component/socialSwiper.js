@@ -1,14 +1,35 @@
-import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css'; 
+import socialDB from '../data/socialDB.json'
+import {Swieprdiv01,Swieprdiv02} from '../commonui/socialui'
 
-function SocialSwiper(props) {
+
+const Banner = () => {
     return (
-    <div className="swiper-slide">
-        <div className="slide-overlay"></div>
-        <div className="sp_text">{props.swipertext}</div>
-        <img src={props.src} alt={props.alt} />
-    </div>
-
-    )
+        <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+            modules={[Autoplay, Pagination, Navigation]}
+            autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+            }}
+        >
+            {
+              socialDB["swiper"].map((v, i) => (
+                
+                  <SwiperSlide key={i} className="swiper-slide">
+                            <Swieprdiv01></Swieprdiv01>
+                            <Swieprdiv02>{v.text}</Swieprdiv02>
+                            <img src={v.src} /> 
+                    </SwiperSlide>
+                ))
+            }
+        </Swiper>
+    );
 }
 
-export default SocialSwiper
+export default Banner;

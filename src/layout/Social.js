@@ -1,6 +1,6 @@
 import React from 'react';
 import socialDB from '../data/socialDB.json'
-import Socialswip from '../component/socialswip'
+import Socialswip from '../component/socialswiper'
 import '../css/social.css'
 import {Socialdiv, Socialul, Sociala, Socialspan01,Socialspan02,Socialspan03} from '../commonui/socialui'
 
