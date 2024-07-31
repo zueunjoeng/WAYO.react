@@ -1,0 +1,268 @@
+.form_tag {
+    height: 868px;
+    background-color: #d3dfff;}
+
+    .form_text{
+
+        text-align: center;
+    }
+
+/* ./form.css */
+.form_momdiv{
+    line-height: 200%;
+    background-color: #F7F8FA;
+    max-width: 1920px;
+    padding:20px; 
+    border-radius: 20px;
+    width : 696px;
+    height: 486px;
+}
+
+.form_box{
+    border-radius: 9px;
+    background-color: white;
+    margin:12px 0px 12px 20px;
+    padding:15px;
+    display: flex;
+    height: 50px;
+    width: 294px;
+
+}
+.form_box_etc{
+    border-radius: 9px;
+    background-color: white;
+    margin:12px 0px 12px 20px;
+    padding:15px;
+    display: flex;
+    height: 50px;
+    width: 600px;
+}
+
+.for_input{
+     border: none;
+}
+.for_input_sele{
+    border: none;
+    width: 150px;
+}
+.addressinput{
+    width: 600px;
+}
+.addressinput>.for_input{
+    width:450px;
+}
+.bi{
+    font-size: 20px;
+}
+.forLabel{
+    margin-right: 20px;
+    font-size: 15px;
+} 
+
+.hourSelect_text{
+    font-size:15px;
+    font-weight: bold;
+}
+
+.selectable {
+    cursor: pointer;
+    width:109px;
+    height: 30px;
+    align-items: center !important;
+    /* padding-bottom :1rem; */
+    border-radius: 30px;
+    text-align: center !important;  
+    
+   
+}
+
+.selectable.selected {
+    background-color: lightgray; /* 선택되었을 때의 배경색 */
+    }
+
+    .subbtn{
+        border: none;
+        background: #F7A4A5;
+        padding: 0 1rem;
+        border-radius: 50px;
+        width: 300px;
+        height: 60px;
+        color:white;
+    }
+
+    .booking{
+        width: 10px;
+        height: 10px;
+        border-radius: 50px;
+        background-color: #396EE2;
+    }
+    .notbooking{
+        width: 10px;
+        height: 10px;
+        border-radius: 50px;
+        background-color: red;
+    }
+    .rest{
+        width: 10px;
+        height: 10px;
+        border-radius: 50px;
+        background-color: #d0d0d0;
+    }
+
+    /* ./style.css */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .serviceform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 594px;
+ 
+  }
+
+.allbox{
+  background-color: white;
+  padding: 20px;
+  width: 1400px;
+  height: 550px;
+  border-radius: 30px;
+}
+.container{
+  max-width: 1400px;
+}
+.zindex{
+  width : 585px;
+    height: 446px;
+      z-index: 10;
+}
+  
+  .calendar {
+    width : 585px;
+    height: 446px;
+    padding:20px;
+  }
+  .main{
+    width: 540px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .year-month {
+    text-align: center;
+    font-size: 35px;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  
+  .nav-btn {
+    width: 30px;
+    height: 32px;
+    border: none;
+    font-size: 16px;
+    line-height: 34px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .go-today {
+    width: 75px;
+  }
+  
+  .days {
+    display: flex;
+    margin: 25px 0 10px;
+    
+  }
+  
+  .day {
+    width: calc(100% / 7);
+    text-align: center;
+  }
+  
+  .dates {
+    display: flex;
+    flex-flow: row wrap;
+    height: 300px;
+    border-top: 1px solid #afafaf;
+  }
+  
+  .date {
+    width: calc(100% / 7);
+    padding-top: 15px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .day:nth-child(7n + 1),
+  .date:nth-child(7n + 1) {
+    color: #D13E3E;
+  }
+  
+  .day:nth-child(7n),
+  .date:nth-child(7n) {
+    color: #396EE2;
+  }
+  
+  .other {
+    opacity: 0.3;
+  }
+  
+  .today {
+    position: relative;
+    color: #ffff;
+  }
+  
+  .today::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-color: #6A92FE;
+    border-radius: 50%;
+    content: '';
+  }
+
+  .date .sunday, .date .saturday {
+    display: inline-block;
+    background-color: #d0d0d0;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .red-circle {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    opacity: 50%;
+    color: white;
+  }
+
+  .blue-circle{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: #6A92FE;
+    opacity: 50%;
+    color: white;
+  }

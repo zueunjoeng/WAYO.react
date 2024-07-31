@@ -6,8 +6,14 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'swiper/swiper-bundle.css';
 import Mainb from './layout/Mainb'
 import Social from './layout/Social'
+import Form from './layout/Form'
 import App from './layout/App'
 import './css/common.css'
+
+import 'jquery-ui/themes/base/theme.css'; // 기본 테마
+import 'jquery-ui/themes/base/button.css';
+import 'jquery-ui/themes/base/dialog.css';
+
 
 
 
@@ -16,8 +22,8 @@ root.render(
   <Router>
   <Mainb />
   <Social />
+  <Form />
   <App />
   </Router>
-    
 
 );

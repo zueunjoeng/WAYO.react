@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../css/app.css'
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
                 <h6 className="app_come_first">첫 회원가입시 2000P 적립</h6>
             </div>
             <div>
-                <a href="javascript:void(0)" className="app_down d-flex">어플 다운로드</a>
+                <Link to="/" className="app_down d-flex">어플 다운로드</Link>
             </div>    
         </div> 
     </section>

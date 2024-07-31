@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.serviceform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 594px;
+}
+
+.allbox {
+    background-color: white;
+    padding: 20px;
+    width: 1400px;
+    height: 550px;
+    border-radius: 30px;
+}
+
+.container {
+    max-width: 1400px;
+}
+
+.zindex {
+    width: 585px;
+    height: 446px;
+    z-index: 10;
+}
+
+.calendar {
+    width: 585px;
+    height: 446px;
+    padding: 20px;
+}
+
+.main {
+    width: 540px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.year-month {
+    text-align: center;
+    font-size: 35px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.nav-btn {
+    width: 30px;
+    height: 32px;
+    border: none;
+    font-size: 16px;
+    line-height: 34px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.go-today {
+    width: 75px;
+}
+
+.days {
+    display: flex;
+    margin: 25px 0 10px;
+}
+
+.day {
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+.dates {
+    display: flex;
+    flex-flow: row wrap;
+    height: 300px;
+    border-top: 1px solid #afafaf;
+}
+
+.date {
+    width: calc(100% / 7);
+    padding-top: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.day:nth-child(7n + 1),
+.date:nth-child(7n + 1) {
+    color: #D13E3E; /* 일요일 색상 */
+}
+
+.day:nth-child(7n),
+.date:nth-child(7n) {
+    color: #396EE2; /* 토요일 색상 */
+}
+
+.other {
+    opacity: 0.3; /* 다른 달 날짜 투명도 */
+}
+
+.today {
+    position: relative;
+    color: #ffff;
+}
+
+.today::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-color: #6A92FE;
+    border-radius: 50%;
+    content: '';
+}
+
+/* 추가된 부분: 주말에 회색 원을 적용 */
+.date .sunday,
+.date .saturday {
+    display: inline-block;
+    background-color: #d0d0d0; /* 회색 배경 */
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px; /* 텍스트 중앙 정렬 */
+}
+
+/* 추가된 부분: 빨간 원 */
+.red-circle {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: red; /* 빨간색 */
+    opacity: 50%; /* 투명도 */
+    color: white;
+}
+
+/* 추가된 부분: 파란 원 */
+.blue-circle {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: #6A92FE; /* 파란색 */
+    opacity: 50%; /* 투명도 */
+    color: white;
+}
