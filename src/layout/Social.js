@@ -1,6 +1,6 @@
 import React from 'react';
 import socialDB from '../data/socialDB.json'
-import Socialswip from '../component/socialswiper'
+import Socialswiper from '../component/Socialswiper'
 import '../css/social.css'
 import {Socialdiv, Socialul, Sociala, Socialspan01,Socialspan02,Socialspan03} from '../commonui/socialui'
 
@@ -15,7 +15,7 @@ function Social() {
                         {/* <!-- Swiper --> */}
                         <div className="swiper mySwiper jeSwiper">
                             <div class="swiper-wrapper">
-                                <Socialswip></Socialswip>
+                                <Socialswiper></Socialswiper>
                             </div>
                         </div>
                             {/* <!-- 스와이퍼 이동버튼 --> */}

@@ -1,12 +1,9 @@
-section{padding-top: 65px !important;}
+   section{padding-top: 65px !important;}
 
     .je_Mainswiper {
         background-color: #F7F8FA;
         height: 700px;}
 
-        .mainbannerLeft {
-            padding: 160px 48px 84px 73px;
-        }
         .mainbanner_Video,
         .main_back,
         .maincollabo {
@@ -30,30 +27,19 @@ section{padding-top: 65px !important;}
             height: 700px;
             box-sizing: border-box;
         }
-
-        .mainbannerText_en {
-            font-family: Quicksand;
-            line-height: 70px;
-            color: #3D71FF;
-            font-weight: bold;
-            font-size: 65px;
+        .maincollabo{
+            background-image: url('/public/img/main_collabo.jpg');
+            border-radius: 350px 0 0 0;
+            border: none;
+            background-size: contain;
+            background-repeat: no-repeat;
+            padding: 0;
+            margin: 0;
+            width: 1242px;
+            height: 700px;
+            box-sizing: border-box;  
         }
-        .mainbannerText_kr {
-            font-family: Noto+Sans+KR;
-            line-height: 23px;
-            color: #3D71FF;
-            font-size: 20px;
-        }
-        .mainbannerText {
-            white-space: nowrap;
-            font-family: Noto+Sans+KR;
-            line-height: 51px;
-            font-weight: bold;
-            color: #3D71FF;
-            font-size: 2.8rem;
-        }
-        .mainActing,
-        .mainvideo {
+        .mainActing{
             text-decoration: none;
             color: #ffff;
             background-color: #6A92FE;
@@ -62,15 +48,8 @@ section{padding-top: 65px !important;}
             width: 212px;
             height: 58px;
         }
-        .mainvideo {
-            padding: 1rem;
-        }
-        .mainbanner_text {
-            font-family: Noto+Sans+KR;
-            font-size: 16px;
-            line-height: 19px;
-            color: #666666;
-        }
+        
+        
         .swiper-pagination {
             position: absolute;
             text-align: center;

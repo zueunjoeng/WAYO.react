@@ -1,24 +1,23 @@
 {
 
-   "hcls" : "mainbannerText",
-   "enhcls" : "mainbannerText_en",
-   "krhcls" : "mainbannerText_kr",
-
-   "banner01":[
+  
+    "banner01":[
         {
-            "text": []
-        }
-    
-    ],
-    "banner02":[
+            "text": "Would you be|My Family?",
+            "subtext": "연간 유기동물 수 약 13만 마리|버려진 생명들은 여전히 가족을 기다리고 있습니다",
+            "btn": "유기동물 보호 활동"
+        },
         {
-
-        }
-    ],
-    "banner03":[
+           
+           "text": "모두가 행복한 공간으로|“와요(WAYO)”!",
+            "subtext": "“와요(WAYO)” 공식 유튜브 리뉴얼!",
+            "btn": "영상 더보기"
+        },
         {
-
+            "text": "콜라보 5월 한정 이벤트",
+            "subtext":"와요 10시간 이상 이용자들에게|15ml 스프레이 일일 선착순 100명 증정(~5/15)|이지세이프 클립+워킹세이프 스프레이 120ml 기간 한정 15%할인",
+            "btn":""
         }
-    ]
-    
-}
+      ]
+        
+    }
