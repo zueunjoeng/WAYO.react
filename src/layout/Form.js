@@ -1,13 +1,13 @@
 //Form.js
-import React, { useState, useEffect } from "react";
+import React from "react";
 import formcss from '../css/formcss.module.scss';
 import Calendar from "../component/Calendar";
 import Formtage from "../component/Formtag";
 import "jquery-ui-dist/jquery-ui";
-
+import Popup from '../component/Popup'
 function Form() {
     return (
-        <>
+
     <section className={`${formcss.form_tag} d-flex justify-content-center`}>
         <div className={`${formcss.container} position-relative`}>
             <div>
@@ -16,25 +16,24 @@ function Form() {
             </div>
 
             <div id="formtag" className={`d-flex justify-content-between align-items-center ${formcss.serviceform}`}>
-            <div className={`${formcss.allbox} d-flex justify-content-between  ${formcss.container}`}>
-                {/* <!-- 왼쪽 달력 --> */}
-                <Calendar />
+                <div className={`${formcss.allbox} d-flex justify-content-between  ${formcss.container}`}>
+                    {/* <!-- 왼쪽 달력 --> */}
+                    <Calendar />
 
-                {/* <!-- 폼태그 --> */}
-                <div className={`d-flex flex-column align-items-center justify-content-center ${formcss.form_momdiv}`}>
-    <form>
-       <Formtage />
+                    {/* <!-- 폼태그 --> */}
+                    <div className={`d-flex flex-column align-items-center justify-content-center ${formcss.form_momdiv}`}>
+                    
+                        <Formtage />
 
-        <button type="submit" className={`mt-3 ${formcss.subbtn}`}>구독하기</button>
-
-        </form>
-    </div>
-                
+                        <button type="submit" className={`mt-3 ${formcss.subbtn}`}>구독하기</button>
+                    </div>
+                        
+                </div>
             </div>
+            <Popup />
         </div>
-    </div>
-</section>
-</>
+    </section>
+
     )
 }
 
