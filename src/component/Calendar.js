@@ -1,3 +1,4 @@
+//Calendar.js
 import React, { useState, useEffect } from 'react';
 import '../css/calender.css'; // CSS 파일 경로
 import formcss from '../css/formcss.module.scss';
@@ -87,6 +88,9 @@ const Calendar = () => {
 
     const selectDate = (clickedDate) => {
         setSelectedDate(clickedDate);
+        // 선택된 날짜를 Formtage의 입력 필드에 입력하는 로직 추가
+        const formattedDate = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(clickedDate).padStart(2, '0')}`;
+        document.getElementById("datepicker").value = formattedDate; // <---- 분홍색 태그: 선택한 날짜를 입력 필드에 설정
     };
 
     const prevMonth = () => {

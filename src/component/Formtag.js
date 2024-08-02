@@ -1,3 +1,4 @@
+// Formtage.js
 import React, { useState, useEffect } from "react";
 import formcss from '../css/formcss.module.scss';
 import Address from "../component/Address";
@@ -27,11 +28,23 @@ function Form() {
  // 숫자만 입력할 수 있는 함수
  const isNumberKey = (evt) => {
     const charCode = (evt.which) ? evt.which : evt.keyCode;
+    
+    // 숫자 입력 제한
     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-      return false; // 숫자가 아닌 경우 false 반환
+        return false; // 숫자가 아닌 경우 false 반환
     }
-    return true; // 숫자인 경우 true 반환
-  };
+
+    // 현재 입력된 숫자 길이 체크
+    const inputField = evt.target; // 이벤트 발생한 타겟 (input 필드)
+    const currentValue = inputField.value; // 현재 입력값
+
+    // 숫자 길이가 11자리인 경우 추가 입력 차단
+    if (currentValue.length >= 11 && charCode !== 8) {
+        return false; // 백스페이스가 아닐 경우 false 반환
+    }
+
+    return true; // 유효한 입력인 경우 true 반환
+}
 
   // 문자만 입력할 수 있는 함수
   const isCharacterKey = (evt) => {
@@ -63,7 +76,6 @@ function Form() {
                         <div className={`d-flex align-items-center ${formcss.form_box}`}>
                             <label htmlFor="datepicker" className={formcss.forLabel}>선택일자</label> {/* 수정된 부분 */}
                             <input className={formcss.for_input_sele} type="text" id="datepicker" name="calender" placeholder="날짜를 선택하세요" />
-                            
                         </div>
                         <div className={`d-flex align-items-center ${formcss.form_box}`}>
                             {/* 희망시간 */}
