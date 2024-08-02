@@ -31,7 +31,7 @@ const Address = () => {
     return (
         <div className="d-flex">
             <div className={`d-flex align-items-center ${formcss.form_box} ${formcss.addressinput}`}>
-                <label htmlFor="sample5_address" className={formcss.form_label}>주소</label>
+                <label htmlFor="sample5_address" className={`${formcss.form_label} me-3`}>주소</label>
                 <input
                     type="text"
                     id="sample5_address"
