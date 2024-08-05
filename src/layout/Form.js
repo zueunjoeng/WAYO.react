@@ -15,7 +15,7 @@ function Form() {
                 <div className={`mt-1 mb-4 ${formcss.form_text}`}>#집중케어 #펫케어 #펫팸족</div>
             </div>
 
-            <div id="formtag" className={`d-flex justify-content-between align-items-center ${formcss.serviceform}`}>
+            <div id="formtag" className={`d-flex justify-content-between align-items-center mb-0 ${formcss.serviceform}`}>
                 <div className={`${formcss.allbox} d-flex justify-content-between  ${formcss.container}`}>
                     {/* <!-- 왼쪽 달력 --> */}
                     <Calendar />
@@ -28,9 +28,10 @@ function Form() {
                         <button type="submit" className={`mt-3 ${formcss.subbtn}`}>구독하기</button>
                     </div>
                         
-                </div>
+                </div> 
+                
             </div>
-            <Popup />
+           <Popup />
         </div>
     </section>
 
