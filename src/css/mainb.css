@@ -15,11 +15,10 @@
             float: none;
         }
 
-        .main_back {
+        .main_back{
             background-image: url('/public/img/mainback_animal.png');
             border-radius: 350px 0 0 0;
             border: none;
-            background-size: contain;
             background-repeat: no-repeat;
             padding: 0;
             margin: 0;
@@ -28,10 +27,9 @@
             box-sizing: border-box;
         }
         .maincollabo{
-            background-image: url('/public/img/main_collabo.jpg');
+            background-image: url('/public/img/main_collabo.png');
             border-radius: 350px 0 0 0;
             border: none;
-            background-size: contain;
             background-repeat: no-repeat;
             padding: 0;
             margin: 0;
@@ -57,67 +55,30 @@
             transform: translate3d(0, 0, 0);
             z-index: 10;}
             
+
             @media (max-width: 1200px) {
-                #je_Mainswiper {
-                    height: 600px; /* 높이 조정 */
-                    .main_back {
-                        width: 1000px; /* 너비 조정 */
-                        height: 600px; /* 높이 조정 */
-                    }
-                    .mainbannerText_en {
-                        font-size: 50px; /* 폰트 크기 조정 */
-                    }
-                    .mainbannerText {
-                        font-size: 2.5rem; /* 폰트 크기 조정 */
-                    }
+                .je_Mainswiper {
+                    height: 596px;
+                }
+                .maindiv{
+                    justify-content: center;
+                }
+                 .main_back, .maincollabo{
+                    width: 600px;
+                    height: 596px;
+                    background-size: cover;
+                } 
+                iframe{
+                    width: 800px;
+                    height: 596px;
+                }
+                .mainbanner_Video,
+                .main_back,
+                .maincollabo {
+                    border-radius: 250px 0 0 0;
+                }
+                .collabologo{
+                    width: 450px;
+                    height: 75px;
                 }
             }
-            
-            @media (max-width: 992px) {
-                #je_Mainswiper {
-                    height: 500px; /* 높이 조정 */
-                    .main_back {
-                        width: 800px; /* 너비 조정 */
-                        height: 500px; /* 높이 조정 */
-                    }
-                    .mainbannerText_en {
-                        font-size: 40px; /* 폰트 크기 조정 */
-                    }
-                    .mainbannerText {
-                        font-size: 2rem; /* 폰트 크기 조정 */
-                    }
-                }
-            }
-            
-            @media (max-width: 768px) {
-                #je_Mainswiper {
-                    height: 400px; /* 높이 조정 */
-                    .main_back {
-                        width: 600px; /* 너비 조정 */
-                        height: 400px; /* 높이 조정 */
-                    }
-                    .mainbannerText_en {
-                        font-size: 30px; /* 폰트 크기 조정 */
-                    }
-                    .mainbannerText {
-                        font-size: 1.8rem; /* 폰트 크기 조정 */
-                    }
-                }
-            }
-            
-            @media (max-width: 576px) {
-                #je_Mainswiper {
-                    height: 300px; /* 높이 조정 */
-                    .main_back {
-                        width: 100%; /* 너비 조정 */
-                        height: 300px; /* 높이 조정 */
-                    }
-                    .mainbannerText_en {
-                        font-size: 20px; /* 폰트 크기 조정 */
-                    }
-                    .mainbannerText {
-                        font-size: 1.5rem; /* 폰트 크기 조정 */
-                    }
-                }
-            }
-            

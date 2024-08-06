@@ -266,3 +266,21 @@
     opacity: 50%;
     color: white;
   }
+
+  @media (max-width: 1200px) {
+    .form_tag>.container {
+        width: 1100px;
+    }
+    .zindex{
+      width : 385px;
+    }
+    .calendar, .main {
+      width : 385px;
+    }
+    .form_momdiv{
+      width : 630px;
+    }
+    .form_box{
+      margin:12px 0px 12px 13px;
+    }
+  }

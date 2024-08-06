@@ -71,82 +71,81 @@ function Form() {
   }, []);
     return (
         <>
-
-                        <div className="d-flex">
-                        <div className={`d-flex align-items-center ${formcss.form_box}`}>
-                            <label htmlFor="datepicker" className={formcss.forLabel}>선택일자</label> {/* 수정된 부분 */}
-                            <input className={formcss.for_input_sele} type="text" id="datepicker" name="calender" placeholder="날짜를 선택하세요" />
-                        </div>
-                        <div className={`d-flex align-items-center ${formcss.form_box}`}>
-                            {/* 희망시간 */}
-                            <label htmlFor="hourSelectStart" className={formcss.forLabel}>희망시간</label> {/* 수정된 부분 */}
-                            <select className={formcss.for_input} id="hourSelectStart" name="hourSelect">
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                            </select>
-                            <span className={`mx-1 ${formcss.hourSelect_text}`}>:</span>
-                            <select className={formcss.for_input} id="miuhourSelectStart" name="hourSelect">
-                                <option value="00">00</option>
-                                <option value="30">30</option>
-                            </select>
-                            <span className={`mx-1 ${formcss.hourSelect_text}`}>~</span>
-                            <select className={formcss.for_input} id="hourSelectEnd" name="hourSelect">
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                            </select>
-                            <span className={`mx-1 ${formcss.hourSelect_text}`}>:</span>
-                            <select className={formcss.for_input} id="miuhourSelectEnd" name="hourSelect">
-                                <option value="00">00</option>
-                                <option value="30">30</option>
-                            </select>
-                            </div>
-                        </div>
-                        {/* 반려동물, 반려동물 수 */}
-                        <div className="d-flex">
-                            <div className={`d-flex align-items-center ${formcss.form_box}`}>
-                                <label htmlFor="petSelect" className={formcss.forLabel}>반려동물</label>
-                                <select className={`ms-auto ${formcss.for_input}`} id="petSelect" name="petSelect" placeholder="종류">
-                                    <option value="" selected disabled hidden>종류</option>
-                                    <option value="강아지">강아지</option>
-                                    <option value="고양이">고양이</option>
-                                    <option value="모두">모두</option>
-                                </select>
-                            </div>
-                            <div className={`d-flex align-items-center ${formcss.form_box}`}>
-                                <label htmlFor="petCount" className={formcss.forLabel}>반려동물 수</label>
-                                <select className={formcss.for_input} id="petCount" name="petCount">
-                                    <option value="">모두 몇마리인가요?</option>
-                                    <option value="1">1마리</option>
-                                    <option value="2">2마리</option>
-                                    <option value="3">3마리</option>
-                                    <option value="4">4마리</option>
-                                    <option value="5+">5마리 이상</option>
-                                </select>
-                            </div>
-                        </div>
-                        {/* 필요 서비스 */}
-                        <div className={`d-flex align-items-center ${formcss.form_box_etc}`}>
-                        <label htmlFor="service" className={formcss.forLabel}>필요서비스</label>
-                        <div className="d-flex align-items-center justify-content-end">
-                        <span
-                        className={`ms-2 pb-1 ${formcss.selectable} ${isSelected('#산책') ? formcss.selected : ''}`}
-                        onClick={() => toggleService('#산책')}
+          <div className="d-flex">
+            <div className={`d-flex align-items-center ${formcss.form_box}`}>
+              <label htmlFor="datepicker" className={formcss.forLabel}>선택일자</label> 
+              <input className={formcss.for_input_sele} type="text" id="datepicker" name="calender" placeholder="날짜를 선택하세요" />
+            </div>
+            <div className={`d-flex align-items-center ${formcss.form_box}`}>
+              {/* 희망시간 */}
+                <label htmlFor="hourSelectStart" className={formcss.forLabel}>희망시간</label> 
+                <select className={formcss.for_input} id="hourSelectStart" name="hourSelect">
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                </select>
+                  <span className={`mx-1 ${formcss.hourSelect_text}`}>:</span>
+                <select className={formcss.for_input} id="miuhourSelectStart" name="hourSelect">
+                  <option value="00">00</option>
+                  <option value="30">30</option>
+                </select>
+                  <span className={`mx-1 ${formcss.hourSelect_text}`}>~</span>
+                <select className={formcss.for_input} id="hourSelectEnd" name="hourSelect">
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                </select>
+                  <span className={`mx-1 ${formcss.hourSelect_text}`}>:</span>
+                <select className={formcss.for_input} id="miuhourSelectEnd" name="hourSelect">
+                  <option value="00">00</option>
+                  <option value="30">30</option>
+                </select>
+            </div>
+          </div>
+              {/* 반려동물, 반려동물 수 */}
+                <div className="d-flex">
+                  <div className={`d-flex align-items-center ${formcss.form_box}`}>
+                    <label htmlFor="petSelect" className={formcss.forLabel}>반려동물</label>
+                    <select className={`ms-auto ${formcss.for_input}`} id="petSelect" name="petSelect" placeholder="종류">
+                      <option value="" selected disabled hidden>종류</option>
+                      <option value="강아지">강아지</option>
+                      <option value="고양이">고양이</option>
+                      <option value="모두">모두</option>
+                    </select>
+                  </div>
+                  <div className={`d-flex align-items-center ${formcss.form_box}`}>
+                    <label htmlFor="petCount" className={formcss.forLabel}>반려동물 수</label>
+                    <select className={formcss.for_input} id="petCount" name="petCount">
+                      <option value="">모두 몇마리인가요?</option>
+                      <option value="1">1마리</option>
+                      <option value="2">2마리</option>
+                      <option value="3">3마리</option>
+                      <option value="4">4마리</option>
+                      <option value="5+">5마리 이상</option>
+                    </select>
+                  </div>
+                </div>
+              {/* 필요 서비스 */}
+                <div className={`d-flex align-items-center ${formcss.form_box_etc}`}>
+                  <label htmlFor="service" className={formcss.forLabel}>필요서비스</label>
+                  <div className="d-flex align-items-center justify-content-end">
+                  <span
+                    className={`ms-2 pb-1 ${formcss.selectable} ${isSelected('#산책') ? formcss.selected : ''}`}
+                    onClick={() => toggleService('#산책')}
                         >
                         #산책
                         </span>
@@ -170,9 +169,9 @@ function Form() {
                         </span>
                         </div>
                         </div>
-                        {/* 주소 */}
+              {/* 주소 */}
                         <Address />
-                        {/* 보호자이름, 연락처 */}
+              {/* 보호자이름, 연락처 */}
                         <div className="d-flex">
                         <div className={`d-flex align-items-center ${formcss.form_box}`}>
                         <label htmlFor="input5" className={formcss.forLabel}>보호자</label>

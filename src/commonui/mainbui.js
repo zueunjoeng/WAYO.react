@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 
-export const Mainswiper = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-`;
-
 export const Mswiper = styled.div`
- padding: 160px 48px 84px 73px;
+ padding: 160px 48px 84px 58px;
 `;
 
 // export const Ptext01 = styled.p`
@@ -26,6 +20,10 @@ export const Ptext02 = styled.p`
     color: #3D71FF;
     font-weight: bold;
     font-size: 3rem;
+
+    @media (max-width: 1200px) {
+        font-size: 2.5rem;
+    }
 `;
 
 
@@ -34,7 +32,11 @@ export const Ptext03 = styled.p`
     font-family: Noto+Sans+KR;
     line-height: 20px;
     color: #3D71FF;
-    font-size: 20px;
+    font-size: 18px;
+
+    @media (max-width: 1200px) {
+        font-size: 15px;
+    }
 `;
 // export const Ptext04 = styled.p`
 // /* mainbanner_text */

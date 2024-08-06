@@ -138,7 +138,9 @@ const Calendar = () => {
                         {dates}
                     </div>
                 </div>
-                <div className="d-flex align-items-center ms-4">
+                
+            </div>
+            <div className="d-flex align-items-center ms-4">
                     <p className="d-flex align-items-center me-3">
                         <span className={`d-block me-1 ${formcss.booking}`}></span>예약가능
                     </p>
@@ -149,7 +151,6 @@ const Calendar = () => {
                         <span className={`d-block me-1 ${formcss.rest}`}></span>휴무
                     </p>
                 </div>
-            </div>
         </div>
     );
 };

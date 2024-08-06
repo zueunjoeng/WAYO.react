@@ -1,6 +1,7 @@
 .clickableText {
     position: relative;
-    cursor: pointer; /* 클릭 가능한 텍스트 스타일 */
+    cursor: pointer;
+    font-size: 1.25rem;
 }
 
 .popup {
@@ -10,7 +11,7 @@
     width: 590px;
     height: 551px;
     background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
-    z-index: 1000000000;
+    z-index: 11;
     border-radius: 30px;
     display: none;
 }
@@ -29,6 +30,24 @@
 .close {
     cursor: pointer;
     float: right;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
+.fs_15{
+    font-size: 1rem;
+}
+@media (max-width: 1200px) {
+    .clickableText, .close{
+        font-size: 1rem;
+    }
+    .popup {
+        width: 450px;
+    }
+    .popupContent {
+        width: 277px;
+        height: 180px;
+    }
+    .fs_15{
+        font-size: 0.75rem;
+    }
+  }

@@ -3,7 +3,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css'; 
 import '../css/mainb.css';
 import mainbDB from '../data/mainbDB.json'
-import {Mainswiper, Mswiper, Ptext02,Ptext03 } from '../commonui/mainbui'
+import {Mswiper, Ptext02,Ptext03 } from '../commonui/mainbui'
 import { Link } from 'react-router-dom';
 
 const BannerSlider = () => {
@@ -26,10 +26,10 @@ const BannerSlider = () => {
     
                 return (
                     <SwiperSlide key={`banner01${i}`}>
-                        <Mainswiper>
+                        <div className='d-flex align-items-center justify-content-between'>
                             <Mswiper>
                                 <div className="mb-4">
-                                    {subtextArray.length === 3 ? ( <img src="/img/main_collabo_txt.png" alt="콜라보로고" />) : null}
+                                    {subtextArray.length === 3 ? ( <img src="/img/main_collabo_txt.png" alt="콜라보로고" className='collabologo'/>) : null}
                                     <Ptext02>{textArray[0]}</Ptext02>
                                     <Ptext02>{textArray[1]}</Ptext02>
                                 </div>
@@ -68,7 +68,7 @@ const BannerSlider = () => {
                                     ) : i === 2 && subtextArray.length > 2 ? (
                                         <div className="maincollabo"> </div>
                                     ) : null}
-                        </Mainswiper>
+                        </div>
                     </SwiperSlide>
                 );
             })}
