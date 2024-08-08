@@ -79,5 +79,19 @@ section{font-family: Noto+Sans+KR;}
             }
             #app_download{
                 background-image: none;
+
+            }
+          }
+          @media (max-width: 768px) {
+            #jeAppbanner {
+                justify-content: center;
+                text-align: center;
+                width: 700px;
+                flex-direction: column;
+            }    
+            #app_download{
+                background-image: none;                
+                height: 230px;
+                /* padding-top: 45px !important; */
             }
           }

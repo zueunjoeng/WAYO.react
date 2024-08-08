@@ -79,7 +79,9 @@
 .selectable.selected {
     background-color: lightgray; /* 선택되었을 때의 배경색 */
     }
-
+    .selectcount>.for_input{
+      display: none;
+    }
     .subbtn{
         border: none;
         background: #F7A4A5;
@@ -282,5 +284,40 @@
     }
     .form_box{
       margin:12px 0px 12px 13px;
+    }
+  }
+  @media (max-width: 768px) {
+    .form_tag>.container {
+        width: 740px;
+    }
+    .zindex{
+      width : 285px;
+    }
+    .calendar, .main {
+      width : 285px;
+    }
+    .form_momdiv{
+      width : 390px;
+      height: 500px;
+    }
+    .form_box,.form_box_etc{
+      margin:3px 0px 3px 3px;
+      padding:8px;
+      width: 360px;
+    }
+    .font{
+      font-size: 15px;
+    }
+    .direction{
+      flex-direction: column;
+    }
+    .selectcount>.for_input{
+      display: block;
+    }
+    .selectable{
+      display: none;
+    }
+    .addressinput>.for_input{
+      width: 250px;
     }
   }

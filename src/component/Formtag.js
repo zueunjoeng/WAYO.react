@@ -71,7 +71,7 @@ function Form() {
   }, []);
     return (
         <>
-          <div className="d-flex">
+          <div className={`d-flex ${formcss.direction}`}>
             <div className={`d-flex align-items-center ${formcss.form_box}`}>
               <label htmlFor="datepicker" className={formcss.forLabel}>선택일자</label> 
               <input className={formcss.for_input_sele} type="text" id="datepicker" name="calender" placeholder="날짜를 선택하세요" />
@@ -117,7 +117,7 @@ function Form() {
             </div>
           </div>
               {/* 반려동물, 반려동물 수 */}
-                <div className="d-flex">
+                <div className={`d-flex ${formcss.direction}`}>
                   <div className={`d-flex align-items-center ${formcss.form_box}`}>
                     <label htmlFor="petSelect" className={formcss.forLabel}>반려동물</label>
                     <select className={`ms-auto ${formcss.for_input}`} id="petSelect" name="petSelect" placeholder="종류">
@@ -129,7 +129,7 @@ function Form() {
                   </div>
                   <div className={`d-flex align-items-center ${formcss.form_box}`}>
                     <label htmlFor="petCount" className={formcss.forLabel}>반려동물 수</label>
-                    <select className={formcss.for_input} id="petCount" name="petCount">
+                    <select className={`ms-auto ${formcss.for_input}`} id="petCount" name="petCount">
                       <option value="">모두 몇마리인가요?</option>
                       <option value="1">1마리</option>
                       <option value="2">2마리</option>
@@ -167,12 +167,24 @@ function Form() {
                         >
                         #돌봄
                         </span>
-                        </div>
-                        </div>
+                    </div>    
+
+                    <div htmlFor="serviceCount"className={`d-flex align-items-center justify-content-center ${formcss.selectcount}`}>
+                      <select className={`ms-auto ${formcss.for_input}`} id="serviceCount" name="serviceCount">
+                        <option value="">필요서비스를 선택하세요</option>
+                        <option value="1">산책</option>
+                        <option value="2">목욕</option>
+                        <option value="3">건강검진</option>
+                        <option value="4">돌봄</option>
+                        <option value="5">상담 후 결정</option>
+                      </select>
+                    </div>
+                  
+                  </div>
               {/* 주소 */}
                         <Address />
               {/* 보호자이름, 연락처 */}
-                        <div className="d-flex">
+                        <div className={`d-flex ${formcss.direction}`}>
                         <div className={`d-flex align-items-center ${formcss.form_box}`}>
                         <label htmlFor="input5" className={formcss.forLabel}>보호자</label>
                         <input

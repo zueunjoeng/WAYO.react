@@ -140,7 +140,7 @@ const Calendar = () => {
                 </div>
                 
             </div>
-            <div className="d-flex align-items-center ms-4">
+            <div className={`d-flex align-items-center ms-4 ${formcss.font}`}>
                     <p className="d-flex align-items-center me-3">
                         <span className={`d-block me-1 ${formcss.booking}`}></span>예약가능
                     </p>
