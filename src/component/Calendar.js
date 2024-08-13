@@ -77,7 +77,7 @@ const Calendar = () => {
                 <div className="date" key={i}>
                     <span 
                         className={`${condition} ${dayClass} ${specialClass}`} 
-                        onClick={specialClass !== 'gray-circle' ? () => selectDate(date) : undefined} // 주말 날짜 클릭 비활성화
+                        onClick={specialClass !== 'gray-circle' && specialClass !== 'red-circle' ? () => selectDate(date) : undefined} // 주말과 예약 불가능 날짜 클릭 비활성화
                     >
                         {date}
                     </span>

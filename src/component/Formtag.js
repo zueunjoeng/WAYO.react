@@ -14,7 +14,7 @@ function Form() {
     w_time: '',
     w_animaltype: 'd',  // 초기값 설정
     w_numberofpets: 1,
-    w_service: 'wj',
+    w_service: '', // 초기값을 빈 문자열로 수정
     w_day: ''
   });
 
@@ -24,8 +24,17 @@ function Form() {
     const updatedServices = selectedServices.includes(service)
       ? selectedServices.filter((s) => s !== service)
       : [...selectedServices, service];
+    
     setSelectedServices(updatedServices);
-    setFormData({ ...formData, selectedServices: updatedServices });
+
+    // 선택된 서비스 값을 업데이트하면서 formData에도 반영
+    handleChange({
+      target: {
+        name: 'w_service',
+        value: updatedServices.join(', '), // 선택된 서비스를 쉼표로 구분하여 formData에 저장
+        type: 'text' // handleChange가 처리할 수 있도록 유형 지정
+      }
+    });
   };
 
   const isSelected = (service) => selectedServices.includes(service);
@@ -37,6 +46,7 @@ function Form() {
       [name]: type === 'checkbox' ? checked : value,
     });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -103,16 +113,21 @@ function Form() {
 
   }, []);
     return (
-        <>
-          <div className={`d-flex ${formcss.direction}`} onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
+          <div className={`d-flex ${formcss.direction}`}>
             <div className={`d-flex align-items-center ${formcss.form_box}`}>
               <label htmlFor="datepicker" className={formcss.forLabel}>선택일자</label> 
-              <input className={formcss.for_input_sele} type="text" id="datepicker" name="w_day" placeholder="날짜를 선택하세요" />
+              <input 
+              className={formcss.for_input_sele} 
+              type="text" 
+              id="datepicker" 
+              name="w_day" 
+              placeholder="날짜를 선택하세요" />
             </div>
             <div className={`d-flex align-items-center ${formcss.form_box}`}>
               {/* 희망시간 */}
                 <label htmlFor="hourSelectStart" className={formcss.forLabel}>희망시간</label> 
-                <select className={formcss.for_input} id="hourSelectStart" name="w_time">
+                <select className={formcss.for_input} id="hourSelectStart" name="w_time" onChange={handleChange}>
                   <option value="10">10</option>
                   <option value="11">11</option>
                   <option value="12">12</option>
@@ -125,12 +140,14 @@ function Form() {
                   <option value="19">19</option>
                 </select>
                   <span className={`mx-1 ${formcss.hourSelect_text}`}>:</span>
-                <select className={formcss.for_input} id="miuhourSelectStart" name="w_time">
+                <select className={formcss.for_input} id="miuhourSelectStart" name="w_time" onChange={handleChange}
+>
                   <option value="00">00</option>
                   <option value="30">30</option>
                 </select>
                   <span className={`mx-1 ${formcss.hourSelect_text}`}>~</span>
-                <select className={formcss.for_input} id="hourSelectEnd" name="w_time">
+                <select className={formcss.for_input} id="hourSelectEnd" name="w_time" onChange={handleChange}
+>
                   <option value="10">10</option>
                   <option value="11">11</option>
                   <option value="12">12</option>
@@ -143,7 +160,8 @@ function Form() {
                   <option value="19">19</option>
                 </select>
                   <span className={`mx-1 ${formcss.hourSelect_text}`}>:</span>
-                <select className={formcss.for_input} id="miuhourSelectEnd" name="w_time">
+                <select className={formcss.for_input} id="miuhourSelectEnd" name="w_time" onChange={handleChange}
+>
                   <option value="00">00</option>
                   <option value="30">30</option>
                 </select>
@@ -153,7 +171,7 @@ function Form() {
                 <div className={`d-flex ${formcss.direction}`}>
                   <div className={`d-flex align-items-center ${formcss.form_box}`}>
                     <label htmlFor="petSelect" className={formcss.forLabel}>반려동물</label>
-                    <select className={`ms-auto ${formcss.for_input}`} id="petSelect" name="animaltype" placeholder="종류">
+                    <select className={`ms-auto ${formcss.for_input}`} id="petSelect" name="w_animaltype" placeholder="종류"  onChange={handleChange}>
                       <option value="" selected disabled hidden>종류</option>
                       <option value="d">강아지</option>
                       <option value="c">고양이</option>
@@ -162,7 +180,7 @@ function Form() {
                   </div>
                   <div className={`d-flex align-items-center ${formcss.form_box}`}>
                     <label htmlFor="petCount" className={formcss.forLabel}>반려동물 수</label>
-                    <select className={`ms-auto ${formcss.for_input}`} id="petCount" name="numerofpets">
+                    <select className={`ms-auto ${formcss.for_input}`} id="petCount" name="w_numerofpets"  onChange={handleChange}>
                       <option value="">모두 몇마리인가요?</option>
                       <option value="1">1마리</option>
                       <option value="2">2마리</option>
@@ -175,7 +193,7 @@ function Form() {
               {/* 필요 서비스 */}
                 <div className={`d-flex align-items-center ${formcss.form_box_etc}`}>
                   <label htmlFor="service" className={formcss.forLabel}>필요서비스</label>
-                  <div className="d-flex align-items-center justify-content-end">
+                  <div className="d-flex align-items-center justify-content-end" name="w_service">
                   <input
                     type="button"
                     value="#산책"
@@ -210,7 +228,7 @@ function Form() {
                     </div>    
 
                     <div htmlFor="serviceCount"className={`d-flex align-items-center justify-content-center ${formcss.selectcount}`}>
-                      <select className={`ms-auto ${formcss.for_input}`} id="serviceCount" name="serviceCount">
+                      <select className={`ms-auto ${formcss.for_input}`} id="serviceCount" name="w_service">
                         <option value="">필요서비스를 선택하세요</option>
                         <option value="wk">산책</option>
                         <option value="wb">목욕</option>
@@ -242,6 +260,8 @@ function Form() {
                             }
                             }}
                             placeholder="성함을 적어주세요"
+                            onChange={handleChange}
+                            
                         />
                         </div>
                         <div className={`d-flex align-items-center ${formcss.form_box}`}>
@@ -259,12 +279,13 @@ function Form() {
                             }
                             }}
                             placeholder="연락처를 적어주세요"
+                            onChange={handleChange}
                         />
                         </div>
                         </div>
                         <button type="submit" className={`mt-3 ${formcss.subbtn}`}>구독하기</button>
 
-</>
+                        </form>
     )
 }
 

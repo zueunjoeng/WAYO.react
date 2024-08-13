@@ -11,7 +11,7 @@ function Social() {
             <div className="container position-relative">
                 <h2>사회 공헌 프로그램</h2>
                 <div className="row">
-                    <div className="col d-flex p-0 sp_je">
+                    <div className="col-6 d-flex p-0">
                         {/* <!-- Swiper --> */}
                         <div className="swiper mySwiper jeSwiper">
                             <div class="swiper-wrapper">
@@ -24,7 +24,7 @@ function Social() {
                             
                     </div>                    
                     {/* <!-- 프로그램 일정 --> */}
-                    <div className="col ps-0 sp_je" >
+                    <div className="col-6 ps-0" >
                         <Socialdiv>
                             <h5 className="pt-1">프로그램 일정</h5>
                             <span className="pt-1"><a href="javascript:void(0)"><h6>더보기</h6></a></span>
