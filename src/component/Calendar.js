@@ -16,7 +16,7 @@ const specialDates = new Map([
     [11, [25]]
 ]);
 
-const Calendar = () => {
+const Calendar = ({ onDateSelect }) => {
     const [date, setDate] = useState(new Date());
     const [selectedDate, setSelectedDate] = useState(null);
     
@@ -90,8 +90,13 @@ const Calendar = () => {
         setSelectedDate(clickedDate);
         // 선택된 날짜를 Formtage의 입력 필드에 입력하는 로직 추가
         const formattedDate = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(clickedDate).padStart(2, '0')}`;
-        document.getElementById("datepicker").value = formattedDate; // <---- 분홍색 태그: 선택한 날짜를 입력 필드에 설정
+        document.getElementById("datepicker").value = formattedDate; //선택한 날짜를 입력 필드에 설정
     };
+    // const selectDate = (clickedDate) => {
+    //     setSelectedDate(clickedDate);
+    //     const formattedDate = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(clickedDate).padStart(2, '0')}`;
+    //     onDateSelect(formattedDate); // 부모 컴포넌트로 날짜 전달
+    // };
 
     const prevMonth = () => {
         setDate(new Date(date.setMonth(date.getMonth() - 1)));

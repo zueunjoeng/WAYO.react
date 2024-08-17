@@ -1,3 +1,4 @@
+//Form.js
 import React, { useState } from "react";
 import formcss from '../css/formcss.module.scss';
 import Calendar from "../component/Calendar";
@@ -8,19 +9,22 @@ import { supabase } from '../data/supabaseClient';
 
 function Form() {
     const [formData, setFormData] = useState({});
+    const [selectedDate, setSelectedDate] = useState('');
 
-    // Formtage에서 폼 데이터를 전달받아 상태를 업데이트하는 함수
     const handleFormData = (data) => {
         setFormData(data);
     };
 
-    // 데이터를 Supabase로 전송하는 함수
+    const handleDateSelect = (date) => {
+        setSelectedDate(date);
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
-            const { data, error } = await supabase
-                .from('petopiaform')
+            const { error } = await supabase
+                .from('petopia') // 테이블 이름을 여기에 넣습니다.
                 .insert([formData]);
 
             if (error) {
@@ -33,7 +37,7 @@ function Form() {
     };
 
     return (
-        <section className={`${formcss.form_tag} d-flex justify-content-center`}>
+        <section onSubmit={handleSubmit} className={`${formcss.form_tag} d-flex justify-content-center`}>
             <div className={`${formcss.container} position-relative`}>
                 <div>
                     <h2 className={`pt-5 ${formcss.form_text}`}>너도 아프냐 멍? 나도 아프다 냥!</h2>
@@ -43,11 +47,11 @@ function Form() {
                 <div id="formtag" className={`d-flex justify-content-between align-items-center mb-0 ${formcss.serviceform}`}>
                     <div className={`${formcss.allbox} d-flex justify-content-between  ${formcss.container}`}>
                         {/* 왼쪽 달력 */}
-                        <Calendar />
+                         <Calendar onDateSelect={handleDateSelect} />
 
                         {/* 폼태그 */}
                         <div className={`d-flex flex-column align-items-center justify-content-center ${formcss.form_momdiv}`}>
-                            <Formtage onFormDataChange={handleFormData} />
+                        <Formtage selectedDate={selectedDate} onFormDataChange={handleFormData} />
                             {/* <button type="submit" className={`mt-3 ${formcss.subbtn}`} onClick={handleSubmit}>
                                 구독하기
                             </button> */}
