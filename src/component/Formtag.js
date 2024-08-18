@@ -18,7 +18,7 @@ function Form({ selectedDate }) {
     w_animaltype: 'd', // 초기값 설정
     w_numberofpets: '1', // 초기값 설정
     w_service: '', // 초기값을 빈 문자열로 수정
-    w_day: selectedDate || ''
+    w_day: '' // 날짜 초기값 설정
   });
 
   const [selectedServices, setSelectedServices] = useState([]);
@@ -28,17 +28,14 @@ function Form({ selectedDate }) {
     const updatedServices = selectedServices.includes(service)
       ? selectedServices.filter((s) => s !== service)
       : [...selectedServices, service];
-    
+
     setSelectedServices(updatedServices);
 
     // 선택된 서비스를 쉼표로 구분하여 formData에 반영
-    handleChange({
-      target: {
-        name: 'w_service',
-        value: updatedServices.join(', '), // 선택된 서비스를 쉼표로 구분
-        type: 'text' // handleChange가 처리할 수 있도록 유형 지정
-      }
-    });
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      w_service: updatedServices.join(', ') // 선택된 서비스를 쉼표로 구분
+    }));
   };
 
   // 서비스 선택 상태 확인 함수
@@ -57,7 +54,7 @@ function Form({ selectedDate }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const {  error } = await supabase
+      const { error } = await supabase
         .from('petopia') // 테이블 이름을 여기에 넣습니다.
         .insert([formData]);
 
@@ -69,44 +66,43 @@ function Form({ selectedDate }) {
     }
   };
 
+
   useEffect(() => {
     // jQuery DatePicker 초기화
     $("#datepicker").datepicker({
       dateFormat: "yy-mm-dd",
-      onSelect: (date) => setFormData(prevFormData => ({ ...prevFormData, w_day: date }))
+      onSelect: (date) => {
+        setFormData((prevFormData) => ({ ...prevFormData, w_day: date }));
+        console.log("Selected date:", date); // 디버깅을 위한 콘솔 로그
+      }
     });
 
     // 숫자만 입력할 수 있는 함수
     const isNumberKey = (evt) => {
       const charCode = evt.which ? evt.which : evt.keyCode;
 
-      // 숫자 입력 제한
       if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-        return false; // 숫자가 아닌 경우 false 반환
+        return false;
       }
 
-      // 현재 입력된 숫자 길이 체크
-      const inputField = evt.target; // 이벤트 발생한 타겟 (input 필드)
-      const currentValue = inputField.value; // 현재 입력값
+      const inputField = evt.target;
+      const currentValue = inputField.value;
 
-      // 숫자 길이가 11자리인 경우 추가 입력 차단
       if (currentValue.length >= 11 && charCode !== 8) {
-        return false; // 백스페이스가 아닐 경우 false 반환
+        return false;
       }
 
-      return true; // 유효한 입력인 경우 true 반환
+      return true;
     };
 
-    // 문자만 입력할 수 있는 함수
     const isCharacterKey = (evt) => {
       const charCode = evt.which ? evt.which : evt.keyCode;
       if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || charCode === 32) {
-        return true; // 문자인 경우 true 반환 (공백 허용)
+        return true;
       }
-      return false; // 문자가 아닌 경우 false 반환
+      return false;
     };
 
-    // 입력 필드에 이벤트 리스너 추가
     const input6 = document.getElementById("input6");
     const input5 = document.getElementById("input5");
 
@@ -126,7 +122,7 @@ function Form({ selectedDate }) {
       });
     }
 
-    // 클린업 함수: 컴포넌트 언마운트 시 이벤트 리스너 제거
+    // 클린업 함수
     return () => {
       if (input6) {
         input6.removeEventListener("keypress", isNumberKey);
@@ -135,7 +131,7 @@ function Form({ selectedDate }) {
         input5.removeEventListener("keypress", isCharacterKey);
       }
     };
-  }, [formData]); // formData를 종속성 배열에 추가
+  }, []);  // 의존성 배열에서 formData를 제거
   
 
     return (

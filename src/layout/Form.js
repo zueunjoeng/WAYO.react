@@ -24,7 +24,7 @@ function Form() {
 
         try {
             const { error } = await supabase
-                .from('petopia') // 테이블 이름을 여기에 넣습니다.
+                .from('petopia')
                 .insert([formData]);
 
             if (error) {
@@ -35,6 +35,7 @@ function Form() {
             console.error('데이터 저장 중 오류 발생:', error.message);
         }
     };
+    
 
     return (
         <section onSubmit={handleSubmit} className={`${formcss.form_tag} d-flex justify-content-center`}>
