@@ -14,6 +14,7 @@ function Form() {
     const handleFormData = (data) => {
         setFormData(data);
     };
+    
 
     const handleDateSelect = (date) => {
         setSelectedDate(date);
@@ -24,7 +25,7 @@ function Form() {
 
         try {
             const { error } = await supabase
-                .from('petopia')
+                .from('pet_form')
                 .insert([formData]);
 
             if (error) {

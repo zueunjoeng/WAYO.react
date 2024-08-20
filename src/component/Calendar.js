@@ -16,7 +16,7 @@ const specialDates = new Map([
     [11, [25]]
 ]);
 
-const Calendar = ({ onDateSelect }) => {
+const Calendar = () => {
     const [date, setDate] = useState(new Date());
     const [selectedDate, setSelectedDate] = useState(null);
     
