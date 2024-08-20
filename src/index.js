@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, BrowserRouter as Router } from 'react-router-dom';
+import {BrowserRouter as Router } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'swiper/swiper-bundle.css';
@@ -20,10 +20,10 @@ import 'jquery-ui/themes/base/dialog.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router>
-  {/* <Mainb /> */}
-  {/* <Social /> */}
+  <Mainb />
+  <Social />
   <Form />
-  {/* <App /> */}
+  <App />
   </Router>
 
 );

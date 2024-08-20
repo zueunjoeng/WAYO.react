@@ -14,7 +14,6 @@ function Form() {
     const handleFormData = (data) => {
         setFormData(data);
     };
-    
 
     const handleDateSelect = (date) => {
         setSelectedDate(date);
@@ -47,16 +46,14 @@ function Form() {
                 </div>
 
                 <div id="formtag" className={`d-flex justify-content-between align-items-center mb-0 ${formcss.serviceform}`}>
-                    <div className={`${formcss.allbox} d-flex justify-content-between  ${formcss.container}`}>
+                    <div className={`${formcss.allbox} d-flex justify-content-between align-items-center ${formcss.container}`}>
                         {/* 왼쪽 달력 */}
                          <Calendar onDateSelect={handleDateSelect} />
 
                         {/* 폼태그 */}
                         <div className={`d-flex flex-column align-items-center justify-content-center ${formcss.form_momdiv}`}>
                         <Formtage selectedDate={selectedDate} onFormDataChange={handleFormData} />
-                            {/* <button type="submit" className={`mt-3 ${formcss.subbtn}`} onClick={handleSubmit}>
-                                구독하기
-                            </button> */}
+                       
                         </div>
                     </div>
                 </div>

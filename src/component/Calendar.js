@@ -90,9 +90,9 @@ const Calendar = () => {
         setSelectedDate(clickedDate);
         // 선택된 날짜를 Formtage의 입력 필드에 입력하는 로직 추가
         const formattedDate = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(clickedDate).padStart(2, '0')}`;
-        document.getElementById("datepicker").value = formattedDate; //선택한 날짜를 입력 필드에 설정
+        document.getElementById("datepicker").value = formattedDate; // <---- 분홍색 태그: 선택한 날짜를 입력 필드에 설정
     };
-    
+
     const prevMonth = () => {
         setDate(new Date(date.setMonth(date.getMonth() - 1)));
         setSelectedDate(null);
@@ -116,8 +116,8 @@ const Calendar = () => {
 
     return (
         <div className={`me-2 ${formcss.zindex}`}>
-            <div className={formcss.calendar}>
-                <div className={formcss.header}>
+            <div className={`${formcss.calendar} d-flex flex-column justify-content-center align-items-center`}>
+                <div className={`d-flex justify-content-center ${formcss.header}`}>
                     <button className={`${formcss['nav-btn']} ${formcss['go-prev']}`} onClick={prevMonth}>&lt;</button>
                     <div className={`${formcss['year-month']} ${formcss['go-today']}`} onClick={goToday}>
                         {viewMonth + 1}월

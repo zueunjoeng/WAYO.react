@@ -52,25 +52,7 @@ section{font-family: Noto+Sans+KR;}
             font-size: 24px;
             font-weight: bold;
         }
-        @media (max-width: 576px) {
-            #app_download:before,
-            #app_download:after {
-                display: none; 
-            }
-            #app_download {
-                background-image: none; 
-            }
-            #jeAppbanner {
-                flex-direction: column; 
-                align-items: center; 
-                text-align: center;
-            }
-            .app_down {
-                margin-top: 1rem;
-                margin-left: 0.5rem; 
-            }
-        }
-    
+      
         @media (max-width: 1200px) {
             #jeAppbanner {
                 justify-content: center;
@@ -94,4 +76,60 @@ section{font-family: Noto+Sans+KR;}
                 height: 230px;
                 /* padding-top: 45px !important; */
             }
+            .app_down{
+                margin-top: 0.5rem;
+                width: 270px;
+                height: 50px;
+                font-size: 20px;
+            }
+            .app_come {
+                font-size: 33px;
+            }
+            .app_come_first {
+                font-size: 23px;
+            }
           }
+
+          @media (max-width: 576px) {
+            #app_download:before,
+            #app_download:after {
+                display: none; 
+            }
+            #app_download {
+                background-image: none; 
+            }
+            #jeAppbanner {
+                flex-direction: column; 
+                align-items: center; 
+                text-align: center;
+            }
+            .app_down {
+                margin-top: 1rem;
+                margin-left: 0.5rem; 
+            }
+        }
+
+        @media (max-width: 320px) {
+            #app_download:before,
+            #app_download:after {
+                display: none; 
+            }
+            #app_download {
+                background-image: none; 
+            }
+            #jeAppbanner {
+                flex-direction: column; 
+                align-items: center; 
+                text-align: center;
+            }
+            .app_down {
+                margin-top: 1rem;
+                margin-left: 0.5rem; 
+            }
+            .app_come {
+                font-size: 28px;
+            }
+            .app_come_first {
+                font-size: 18px;
+            }
+        }

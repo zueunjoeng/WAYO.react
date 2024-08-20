@@ -59,4 +59,11 @@ export const Swieprdiv02 = styled.div`
         bottom: 10px;
         color: white;
         font-size: 30px;
+        
+        &>img{
+            @media (max-width: 320px) {
+             width: 300px;
+             height: 380px;
+      }
+    }
 `

@@ -39,27 +39,20 @@ function Form() {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
+    setFormData((prevFormData) => ({
+      ...prevFormData,
       [name]: type === 'checkbox' ? checked : value,
-    });
+      w_day: prevFormData.w_day // 유지하려는 날짜
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    // 데이터 길이 검증
-    const validatedFormData = {
-      ...formData,
-      w_animaltype: formData.w_animaltype.substring(0, 2),
-      w_numberofpets: formData.w_numberofpets.substring(0, 2),
-      // 다른 필드도 필요에 따라 검증
-    };
-  
     try {
       const { error } = await supabase
         .from('pet_form')
-        .insert([validatedFormData]);
+        .insert([formData]);
   
       if (error) throw error;
       alert('감사합니다. "예약 확정 확인 문자"가 전송될 예정입니다!');
@@ -72,64 +65,63 @@ function Form() {
   useEffect(() => {
     $("#datepicker").datepicker({
       dateFormat: "yy-mm-dd",
-      onSelect: (date) => {
-        setFormData((prevFormData) => ({ ...prevFormData, w_day: date }));
+      onSelect: (dateText) => {
+        setFormData((prevFormData) => ({
+          ...prevFormData,
+          w_day: dateText
+        }));
       }
     });
 
-    const input6 = document.getElementById("input6");
-    const input5 = document.getElementById("input5");
+    // 날짜를 formData에서 가져와 datepicker에 설정합니다.
+    if (formData.w_day) {
+      $("#datepicker").datepicker("setDate", formData.w_day);
+    }
 
+    // 숫자와 문자 입력 제한 설정
     const isNumberKey = (evt) => {
-      const charCode = evt.which ? evt.which : evt.keyCode;
-      if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
-      if (input6.value.length >= 11 && charCode !== 8) return false;
-      return true;
+      const charCode = (evt.which) ? evt.which : evt.keyCode;
+      return charCode <= 31 || (charCode >= 48 && charCode <= 57) || charCode === 8;
     };
 
     const isCharacterKey = (evt) => {
-      const charCode = evt.which ? evt.which : evt.keyCode;
-      if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || charCode === 32) {
-        return true;
-      }
-      return false;
+      const charCode = (evt.which) ? evt.which : evt.keyCode;
+      return (charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || charCode === 32;
     };
 
-    if (input6) {
-      input6.addEventListener("keypress", function (event) {
-        if (!isNumberKey(event)) event.preventDefault();
-      });
-    }
+    // 입력 필드에 이벤트 리스너 추가
+    document.getElementById("input6")?.addEventListener("keypress", function (event) {
+      if (!isNumberKey(event)) {
+        event.preventDefault();
+      }
+    });
 
-    if (input5) {
-      input5.addEventListener("keypress", function (event) {
-        if (!isCharacterKey(event)) event.preventDefault();
-      });
-    }
+    document.getElementById("input5")?.addEventListener("keypress", function (event) {
+      if (!isCharacterKey(event)) {
+        event.preventDefault();
+      }
+    });
 
     return () => {
-      if (input6) {
-        input6.removeEventListener("keypress", isNumberKey);
-      }
-      if (input5) {
-        input5.removeEventListener("keypress", isCharacterKey);
-      }
+      // Clean up event listeners on component unmount
+      document.getElementById("input6")?.removeEventListener("keypress", isNumberKey);
+      document.getElementById("input5")?.removeEventListener("keypress", isCharacterKey);
     };
-  }, []);
+  }, [formData.w_day]);
 
   useEffect(() => {
+    const loadDaumPostcodeScript = () => {
+      const script = document.createElement('script');
+      script.src = "//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js";
+      script.async = true;
+      script.onload = () => {
+        window.daumPostcode = window.daum.Postcode;
+      };
+      document.body.appendChild(script);
+    };
+
     loadDaumPostcodeScript();
   }, []);
-
-  const loadDaumPostcodeScript = () => {
-    const script = document.createElement('script');
-    script.src = "//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js";
-    script.async = true;
-    script.onload = () => {
-      window.daumPostcode = window.daum.Postcode;
-    };
-    document.body.appendChild(script);
-  };
 
   const sample5_execDaumPostcode = () => {
     new window.daum.Postcode({
@@ -141,9 +133,9 @@ function Form() {
     }).open();
   };
 
-  return (
-    <form onSubmit={handleSubmit} className="d-flex flex-column justify-content-center">
-    <ul className={`d-flex ${formcss.direction}`}>
+  return  (
+    <form onSubmit={handleSubmit} className="d-flex flex-column justify-content-center align-items-center m-0">
+    <ul className={`d-flex ${formcss.direction} p-0 m-0`}>
       <li className={`d-flex align-items-center ${formcss.form_box}`}>
         <label htmlFor="datepicker" className={formcss.forLabel}>선택일자</label>
         <input
@@ -153,7 +145,7 @@ function Form() {
           name="w_day"
           placeholder="날짜를 선택하세요"
           value={formData.w_day}
-          onChange={(e) => handleChange(e, setFormData)}
+          onChange={handleChange}
         />
       </li>
       <li className={`d-flex align-items-center ${formcss.form_box}`}>
@@ -163,7 +155,7 @@ function Form() {
           id="hourSelectStart"
           name="start_hour"
           value={formData.start_hour}
-          onChange={(e) => handleChange(e, setFormData)}
+          onChange={handleChange}
         >
           {[...Array(10).keys()].map(i => (
             <option key={i + 10} value={i + 10}>{i + 10}</option>
@@ -175,7 +167,7 @@ function Form() {
           id="miuhourSelectStart"
           name="start_minute"
           value={formData.start_minute}
-          onChange={(e) => handleChange(e, setFormData)}
+          onChange={handleChange}
         >
           <option value="00">00</option>
           <option value="30">30</option>
@@ -186,7 +178,7 @@ function Form() {
           id="hourSelectEnd"
           name="end_hour"
           value={formData.end_hour}
-          onChange={(e) => handleChange(e, setFormData)}
+          onChange={handleChange}
         >
           {[...Array(10).keys()].map(i => (
             <option key={i + 10} value={i + 10}>{i + 10}</option>
@@ -198,7 +190,7 @@ function Form() {
           id="miuhourSelectEnd"
           name="end_minute"
           value={formData.end_minute}
-          onChange={(e) => handleChange(e, setFormData)}
+          onChange={handleChange}
         >
           <option value="00">00</option>
           <option value="30">30</option>
@@ -206,7 +198,7 @@ function Form() {
       </li>
     </ul>
 
-    <ul className={`d-flex ${formcss.direction}`}>
+    <ul className={`d-flex ${formcss.direction} p-0 m-0`}>
       <li className={`d-flex align-items-center ${formcss.form_box}`}>
         <label htmlFor="petSelect" className={formcss.forLabel}>반려동물</label>
         <select
@@ -215,7 +207,7 @@ function Form() {
           name="w_animaltype"
           placeholder="종류"
           value={formData.w_animaltype}
-          onChange={(e) => handleChange(e, setFormData)}
+          onChange={handleChange}
         >
           <option value="" disabled hidden>종류</option>
           <option value="d">강아지</option>
@@ -230,7 +222,7 @@ function Form() {
           id="petCount"
           name="w_numberofpets"
           value={formData.w_numberofpets}
-          onChange={(e) => handleChange(e, setFormData)}
+          onChange={handleChange}
         >
           <option value="">모두 몇마리인가요?</option>
           <option value="1">1마리</option>
@@ -276,20 +268,20 @@ function Form() {
           />
         </div>
         <div className={`d-flex align-items-center justify-content-center ${formcss.selectcount}`}>
-          <select className={`ms-auto ${formcss.for_input}`} id="serviceCount" name="w_service" onChange={(e) => handleChange(e, setFormData)}>
+          <select className={`ms-auto ${formcss.for_input}`} id="serviceCount" name="w_service" onChange={handleChange}>
             <option value="">필요서비스를 선택하세요</option>
-            <option value="wk">산책</option>
-            <option value="wb">목욕</option>
-            <option value="wh">건강검진</option>
-            <option value="wc">돌봄</option>
-            <option value="wt">상담 후 결정</option>
+            <option value="#산책">산책</option>
+            <option value="#목욕">목욕</option>
+            <option value="#건강검진">건강검진</option>
+            <option value="#돌봄">돌봄</option>
+            <option value="#상담 후 결정">상담 후 결정</option>
           </select>
         </div>
       </li>
     </ul>
 
     <div className={`d-flex align-items-center ${formcss.form_box} ${formcss.addressinput}`}>
-      <label htmlFor="sample5_address" className={`${formcss.form_label} me-3`}>주소</label>
+      <label htmlFor="sample5_address" className={`${formcss.forLabel} me-3`}>주소</label>
       <input
         type="text"
         id="sample5_address"
@@ -310,7 +302,7 @@ function Form() {
       </button>
     </div>
 
-    <ul className={`d-flex ${formcss.direction}`}>
+    <ul className={`d-flex ${formcss.direction} p-0 m-0`}>
       <li className={`d-flex align-items-center ${formcss.form_box}`}>
         <label htmlFor="input5" className={formcss.forLabel}>보호자</label>
         <input
@@ -320,7 +312,7 @@ function Form() {
           name="w_name"
           placeholder="성함을 적어주세요"
           value={formData.w_name}
-          onChange={(e) => handleChange(e, setFormData)}
+          onChange={handleChange}
         />
       </li>
       <li className={`d-flex align-items-center ${formcss.form_box}`}>
@@ -332,7 +324,7 @@ function Form() {
           name="w_ph"
           placeholder="연락처를 적어주세요"
           value={formData.w_ph}
-          onChange={(e) => handleChange(e, setFormData)}
+          onChange={handleChange}
         />
       </li>
     </ul>
