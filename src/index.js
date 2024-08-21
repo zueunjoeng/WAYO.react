@@ -20,10 +20,10 @@ import 'jquery-ui/themes/base/dialog.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router>
-  <Mainb />
+  {/* <Mainb /> */}
   <Social />
-  <Form />
-  <App />
+  {/* <Form /> */}
+  {/* <App /> */}
   </Router>
 
 );

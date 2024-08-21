@@ -8,21 +8,11 @@ function Social() {
 
     return (
     <section id="social_program" className="margin">
-            <div className="container position-relative">
+            <div className="container">
                 <h2>사회 공헌 프로그램</h2>
                 <div className="row">
-                    <div className="col-6 d-flex p-0">
                         {/* <!-- Swiper --> */}
-                        <div className="swiper mySwiper jeSwiper">
-                            <div class="swiper-wrapper">
-                                <Socialswiper></Socialswiper>
-                            </div>
-                        </div>
-                            {/* <!-- 스와이퍼 이동버튼 --> */}
-                        <div className="swiper-button-next"></div>
-                        <div className="swiper-button-prev"></div>
-                            
-                    </div>                    
+                        <Socialswiper></Socialswiper>                  
                     {/* <!-- 프로그램 일정 --> */}
                     <div className="col-6 ps-0" >
                         <Socialdiv>

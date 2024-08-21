@@ -29,10 +29,11 @@ export const Sociala = styled.a`
 `;
 
 export const Socialspan01 = styled.a`
-font-size: 10px;
+font-size: 0.6rem;
 `
 export const Socialspan02 = styled.a`
 margin-right:-1.25rem;
+font-size: 1rem;
  &:hover{
     text-decoration: underline;
  }
@@ -58,12 +59,5 @@ export const Swieprdiv02 = styled.div`
         left: 20px;
         bottom: 10px;
         color: white;
-        font-size: 30px;
-        
-        &>img{
-            @media (max-width: 320px) {
-             width: 300px;
-             height: 380px;
-      }
-    }
+        font-size: 1.45rem;        
 `
