@@ -1,377 +1,475 @@
 .form_tag {
-    height: 868px;
-    background-color: #d3dfff;}
-
-    .form_text{
-
-        text-align: center;
-    }
-
-/* ./form.css */
-.form_momdiv{
-    line-height: 200%;
-    background-color: #F7F8FA;
-    max-width: 1920px;
-    padding:20px; 
-    border-radius: 20px;
-    width : 696px;
-    height: 486px;
+  height: 54.25rem;
+  background-color: #d3dfff;
 }
 
-.form_box{
-    border-radius: 9px;
-    background-color: white;
-    margin:12px 0px 12px 20px;
-    padding:15px;
-    display: flex;
-    height: 50px;
-    width: 294px;
-
-}
-.form_box_etc{
-    border-radius: 9px;
-    background-color: white;
-    margin:12px 0px 12px 20px;
-    padding:15px;
-    display: flex;
-    height: 50px;
-    width: 600px;
+.form_text {
+  text-align: center;
 }
 
-.for_input{
-     border: none;
+.form_momdiv {
+  line-height: 200%;
+  background-color: #F7F8FA;
+  max-width: 120rem;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  height: 30.375rem;
 }
-.for_input_sele{
-    border: none;
-    width: 150px;
-}
-.addressinput{
-    width: 600px;
-}
-.addressinput>.for_input{
-    width:450px;
-}
-.bi{
-    font-size: 20px;
-}
-.forLabel{
-    margin-right: 20px;
-    font-size: 15px;
-} 
 
-.hourSelect_text{
-    font-size:15px;
-    font-weight: bold;
+.form_box {
+  border-radius: 0.5625rem;
+  background-color: white;
+  margin: 0.75rem 0 0.75rem 1.25rem;
+  padding: 0.9375rem;
+  display: flex;
+  height: 3.125rem;
+  width: 18.375rem;
+}
+
+.form_box_etc {
+  border-radius: 0.5625rem;
+  background-color: white;
+  margin: 0.75rem 0 0.75rem 1.25rem;
+  padding: 0.9375rem;
+  display: flex;
+  height: 3.125rem;
+  width: 37.5rem;
+}
+
+.for_input {
+  border: none;
+}
+
+.for_input_sele {
+  border: none;
+  width: 9.375rem;
+}
+
+.addressinput {
+  width: 37.5rem;
+}
+
+.addressinput > .for_input {
+  width: 28.125rem;
+}
+
+.bi {
+  font-size: 1.25rem;
+}
+
+.forLabel {
+  margin-right: 1.25rem;
+  font-size: 0.9375rem;
+}
+
+.hourSelect_text {
+  font-size: 0.9375rem;
+  font-weight: bold;
 }
 
 .selectable {
-    cursor: pointer;
-    width:109px;
-    height: 30px;
-    align-items: center !important;
-    /* padding-bottom :1rem; */
-    border-radius: 30px;
-    border:none;
-    text-align: center !important;  
-    background-color: transparent;
-   
+  cursor: pointer;
+  width: 6.8125rem;
+  height: 1.875rem;
+  align-items: center !important;
+  border-radius: 1.875rem;
+  border: none;
+  text-align: center !important;
+  background-color: transparent;
 }
 
 .selectable.selected {
-    background-color: lightgray; /* 선택되었을 때의 배경색 */
-    }
-    .selectcount>.for_input{
-      display: none;
-    }
-    .subbtn{
-        border: none;
-        background: #F7A4A5;
-        padding: 0 1rem;
-        border-radius: 50px;
-        width: 300px;
-        height: 60px;
-        color:white;
-    }
+  background-color: lightgray;
+}
 
-    .booking{
-        width: 10px;
-        height: 10px;
-        border-radius: 50px;
-        background-color: #396EE2;
-    }
-    .notbooking{
-        width: 10px;
-        height: 10px;
-        border-radius: 50px;
-        background-color: red;
-    }
-    .rest{
-        width: 10px;
-        height: 10px;
-        border-radius: 50px;
-        background-color: #d0d0d0;
-    }
+.selectcount > .for_input {
+  display: none;
+}
 
-    /* ./style.css */
-* {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
-  }
-  
-  .serviceform {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 594px;
- 
-  }
+.subbtn {
+  border: none;
+  background: #F7A4A5;
+  padding: 0 1rem;
+  border-radius: 3.125rem;
+  width: 18.75rem;
+  height: 3.75rem;
+  color: white;
+}
 
-.allbox{
+.booking {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: #396EE2;
+}
+
+.notbooking {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.rest {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: #d0d0d0;
+}
+
+.serviceform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 37.125rem;
+}
+
+.allbox {
   background-color: white;
-  padding: 20px;
-  width: 1400px;
-  height: 550px;
-  border-radius: 30px;
+  padding: 1.25rem;
+  width: 87.5rem;
+  height: 34.375rem;
+  border-radius: 1.875rem;
 }
-.container{
-  max-width: 1400px;
+
+.container {
+  max-width: 87.5rem;
 }
-.zindex{
-  width : 585px;
-    height: 446px;
-      z-index: 10;
+
+.zindex {
+  height: 27.875rem;
+  z-index: 10;
+  margin-bottom: 1rem;
 }
-  
-  .calendar {
-    width : 585px;
-    height: 446px;
-    padding:20px;
-  }
-  .main{
-    width: 540px;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .year-month {
-    text-align: center;
-    font-size: 35px;
-    margin: 0 15px;
-    cursor: pointer;
-  }
-  
-  .nav-btn {
-    width: 30px;
-    height: 32px;
-    border: none;
-    font-size: 16px;
-    line-height: 34px;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  
-  .go-today {
-    width: 75px;
-  }
-  
-  .days {
-    display: flex;
-    margin: 25px 0 10px;
-    
-  }
-  
-  .day {
-    width: calc(100% / 7);
-    text-align: center;
-  }
-  
-  .dates {
-    display: flex;
-    flex-flow: row wrap;
-    height: 300px;
-    border-top: 1px solid #afafaf;
-  }
-  
-  .date {
-    width: calc(100% / 7);
-    padding-top: 15px;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .day:nth-child(7n + 1),
-  .date:nth-child(7n + 1) {
-    color: #D13E3E;
-  }
-  
-  .day:nth-child(7n),
-  .date:nth-child(7n) {
-    color: #396EE2;
-  }
-  
-  .other {
-    opacity: 0.3;
-  }
-  
-  .today {
-    position: relative;
-    color: #ffff;
-  }
-  
-  .today::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    width: 30px;
-    height: 30px;
-    display: block;
-    background-color: #6A92FE;
-    border-radius: 50%;
-    content: '';
-  }
 
-  .date .sunday, .date .saturday {
-    display: inline-block;
-    background-color: #d0d0d0;
-    color: white;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-  }
+.calendar {
+  width: 36.5625rem;
+  height: 27.875rem;
+  padding: 1.25rem;
+}
 
-  .red-circle {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 50%;
-    background-color: red;
-    opacity: 50%;
-    color: white;
-  }
+.main {
+  width: 33.75rem;
+}
 
-  .blue-circle{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 50%;
-    background-color: #6A92FE;
-    opacity: 50%;
-    color: white;
-  }
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  @media (max-width: 1200px) {
-    .form_tag>.container {
-        width: 1100px;
-    }
-    .zindex{
-      width : 385px;
-    }
-    .calendar, .main {
-      width : 385px;
-    }
-    .form_momdiv{
-      width : 630px;
-    }
-    .form_box{
-      margin:12px 0px 12px 13px;
-    }
-  }
+.year-month {
+  text-align: center;
+  font-size: 2.1875rem;
+  margin: 0 0.9375rem;
+  cursor: pointer;
+}
 
-  @media (max-width: 768px) {
-    .form_tag>.container {
-        width: 740px;
-    }
-    .zindex{
-      width : 285px;
-    }
-    .calendar, .main {
-      width : 285px;
-    }
-    .form_momdiv{
-      width : 390px;
-      height: 500px;
-    }
-    .form_box,.form_box_etc{
-      margin:3px 0px 3px 3px;
-      padding:8px;
-      width: 360px;
-    }
-    .font{
-      font-size: 15px;
-    }
-    .direction{
+.nav-btn {
+  width: 1.875rem;
+  height: 2rem;
+  border: none;
+  font-size: 1rem;
+  line-height: 2.125rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.go-today {
+  width: 4.6875rem;
+}
+
+.days {
+  display: flex;
+  margin: 1.5625rem 0 0.625rem;
+}
+
+.day {
+  width: calc(100% / 7);
+  text-align: center;
+}
+
+.dates {
+  display: flex;
+  flex-flow: row wrap;
+  height: 18.75rem;
+  border-top: 1px solid #afafaf;
+}
+
+.date {
+  width: calc(100% / 7);
+  padding-top: 0.9375rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.day:nth-child(7n + 1),
+.date:nth-child(7n + 1) {
+  color: #D13E3E;
+}
+
+.day:nth-child(7n),
+.date:nth-child(7n) {
+  color: #396EE2;
+}
+
+.other {
+  opacity: 0.3;
+}
+
+.today {
+  position: relative;
+  color: #ffff;
+}
+
+.today::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 1.875rem;
+  height: 1.875rem;
+  display: block;
+  background-color: #6A92FE;
+  border-radius: 50%;
+  content: '';
+}
+
+.date .sunday, .date .saturday {
+  display: inline-block;
+  background-color: #d0d0d0;
+  color: white;
+  border-radius: 50%;
+  width: 1.875rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+}
+
+.red-circle {
+  display: inline-block;
+  width: 1.875rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  border-radius: 50%;
+  background-color: red;
+  opacity: 50%;
+  color: white;
+}
+
+.blue-circle {
+  display: inline-block;
+  width: 1.875rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  border-radius: 50%;
+  background-color: #6A92FE;
+  opacity: 50%;
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .form_tag>.container {
+      width: 68.75rem;
+  }
+  .zindex {
+      width: 24.0625rem;
+  }
+  .calendar, .main {
+      width: 24.0625rem;
+  }
+  .form_momdiv {
+      width: 39.375rem;
+  }
+  .form_box {
+      margin: 0.75rem 0 0.75rem 0.8125rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .form_tag>.container {
+    width: 55.75rem;
+}
+  .allbox {
+      width: 58.75rem;
+  }
+  .zindex {
+      width: 20.9375rem;
+  }
+  .calendar, .main {
+      width: 20.9375rem;
+  }
+  .form_momdiv {
+      width: 34.375rem;
+      height: 31rem;
+  }
+  .form_box, .form_box_etc {
+      margin: 0.1875rem 0 0.1875rem 0.1875rem;
+      padding: 0.3125rem;
+      width: 32.5rem;
+  }
+  .direction {
       flex-direction: column;
-    }
-    .selectcount>.for_input{
+  }
+  .selectable {
+      width: 5.5625rem;
+  }
+  .subbtn {
+      height: 2.1875rem;
+      margin-top: 0.375rem !important;
+  }
+  .addressinput {
+      width: 33.125rem;
+      margin-right: 0;
+  }
+  .addressinput > .for_input {
+      width: 21.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .form_tag>.container {
+    width: 41.75rem;
+}
+.form_tag {
+  height: 78.125rem;
+}
+  .allbox {
+    flex-direction: column;
+      width: 46.25rem;
+      height: 62.5rem;
+      align-items: center;
+  }
+  .zindex {
+      width: 30rem;
+  }
+  .calendar, .main {
+      width: 30rem;
+  }
+  .form_momdiv {
+      width: 30rem;
+      height: 35rem;
+  }
+  .form_box, .form_box_etc {
+      margin: 0.1875rem 0 0.1875rem 0.1875rem;
+      padding: 0.5rem;
+      width: 22.5rem;
+  }
+  .font {
+      font-size: 0.9375rem;
+  }
+  .direction {
+      flex-direction: column;
+  }
+  .selectcount > .for_input {
       display: block;
-    }
-    .selectable{
+  }
+  .selectable {
       display: none;
-    }
-    .addressinput>.for_input{
-      width: 250px;
-    }
-    .subbtn{
-      height: 35px;
-      margin-top: 6px !important;
-    }
+  }
+  .addressinput > .for_input {
+      width: 15.625rem;
+  }
+  .subbtn {
+      height: 2.1875rem;
+      margin-top: 0.375rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .form_tag>.container {
+    width:  29.75rem;
+}
+  .allbox {
+      flex-direction: column;
+      width: 32.875rem;
+      height: 62.5rem;
+      align-items: center;
+  }
+  .form_tag {
+      height: 78.125rem;
+  }
+  .form_text {
+      padding-top: 0.3125rem !important;
+  }
+  .form_momdiv {
+      width: 30rem;
+      height: 31.25rem;
+      margin-top: 1.25rem;
+  }
+  // .form_box, .form_box_etc {
+  //     margin: 0.1875rem 0 0.1875rem 0.1875rem;
+  //     padding: 0.5rem;
+  //     width: 22.5rem;
+  // }
+  .form_box, .form_box_etc {
+    margin: 0.1875rem 0 0.1875rem 0.1875rem;
+    padding: 0.5rem;
+    width: 22.5rem;
+}
+  .font {
+      font-size: 0.9375rem;
+  }
+  .direction {
+      flex-direction: column;
+  }
+  .selectcount > .for_input {
+      display: block;
+  }
+  .selectable {
+      display: none;
+  }
+  .addressinput > .for_input {
+      width: 15.625rem;
+  }
+  .subbtn {
+      height: 2.1875rem;
+      margin-top: 0.375rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .form_tag>.container {
+      width: 18.75rem;
   }
 
-  @media (max-width: 320px) {
-    .form_tag>.container{
-      width: 300px;
-    }
-    .form_tag{
-      height: 1250px; 
-    }
-    .form_text{
-      padding-top: 5px !important;
-    }
-    .allbox{
-      flex-direction: column;
-      width: 300px;    
-      height: 1000px;
-      padding-left: 10px;
-    }
-    .calendar, .main {
-      width : 240px;
-    }
-    .zindex{
-      width : 240px;
-    }
-    .font{
-      font-size: 10px;
-    }
-    .form_momdiv{
-      width : 280px;
-      height: 500px;
-      margin-top: 20px;
-    }
-    .form_box,.form_box_etc{
-      margin:2px 0px 2px 2px;
-      padding:5px;
-      width: 250px;
-    }
-    .subbtn{
-      width: 220px;
-      height: 25px;
-      margin-top: 6px !important;
-    }
-    .direction, .form_box, .form_box_etc,.forLabel{
-      font-size: 10px;
-    }
-    .forLabel{
-      margin-right: 5px;
-    }
+  .form_text {
+      padding-top: 0.3125rem !important;
   }
+  .allbox {
+      flex-direction: column;
+      width: 18.75rem;
+      height: 62.5rem;
+      padding-left: 0.625rem;
+  }
+  .calendar, .main {
+      width: 15rem;
+  }
+  .zindex {
+      width: 15rem;
+  }
+  .font {
+      font-size: 0.625rem;
+  }
+  .form_momdiv {
+      width: 17.5rem;
+      height: 31.25rem;
+      margin-top: 1.25rem;
+  }
+  .form_box, .form_box_etc {
+      margin: 0.125rem 0 0.125rem 0.125rem;
+      padding: 0.3125rem;
+      width: 15.625rem;
+  }
+  .subbtn {
+      width: 13.75rem;
+      height: 1.5625rem;
+      margin-top: 0.375rem !important;
+  }
+  .direction, .form_box, .form_box_etc, .forLabel {
+      font-size: 0.625rem;
+  }
+  .forLabel {
+      margin-right: 0.3125rem;
+  }
+}

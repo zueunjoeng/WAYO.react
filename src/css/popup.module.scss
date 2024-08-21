@@ -7,24 +7,23 @@
 .popup {
     position: absolute;
     top: 20.5%;
-    left:0;
-    width: 590px;
-    height: 551px;
-    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+    left: 0;
+    width: 36.875rem;
+    height: 34.4375rem;
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 11;
-    border-radius: 30px;
+    border-radius: 1.875rem;
     display: none;
 }
 
-
 .popupContent {
     background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 377px;
-    height: 226px;
-    border-radius: 30px;
+    padding: 1.25rem;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+    width: 23.5625rem;
+    height: 14.125rem;
+    border-radius: 1.875rem;
 }
 
 .close {
@@ -33,35 +32,70 @@
     font-size: 1.25rem;
 }
 
-.fs_15{
+.fs_15 {
     font-size: 1rem;
 }
+
 @media (max-width: 1200px) {
-    .clickableText, .close{
+    .clickableText, .close {
         font-size: 1rem;
     }
     .popup {
         width: 450px;
     }
     .popupContent {
-        width: 277px;
-        height: 180px;
+        width: 17.3125rem;
+        height: 11.25rem;
     }
-    .fs_15{
+    .fs_15 {
         font-size: 0.75rem;
     }
-  }
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
     .popup {
-        top:19.5%;
-        width: 740px;
+        top: 20.3%;
+        width: 58.75rem;
     }
     .popupContent {
-        width: 377px;
-        height: 250px;
+        width: 23.5625rem;
+        height: 15.625rem;
     }
-    .fs_15{
+    .fs_15 {
         font-size: 1rem;
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
-  }
+}
+
+@media (max-width: 768px) {
+    .popup {
+        top: 19%;
+        width: 46.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .popup {
+        top: 49.3%;
+        bottom: 0;
+        width: 32.875rem;
+        height: 31.25rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .popup {
+        top: 49.3%;
+        bottom: 0;
+        width: 18.75rem;
+        height: 31.25rem;
+    }
+    .popupContent {
+        width: 11.0625rem;
+        height: 15.625rem;
+    }
+    .fs_15 {
+        font-size: 0.5rem;
+        margin-top: 1.25rem;
+    }
+}
