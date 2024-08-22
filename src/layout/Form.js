@@ -38,7 +38,7 @@ function Form() {
     
 
     return (
-        <section onSubmit={handleSubmit} className={`${formcss.form_tag} d-flex justify-content-center`}>
+        <section onSubmit={handleSubmit} className={`${formcss.form_tag} d-flex justify-content-center margin`}>
             <div className={`${formcss.container} position-relative`}>
                 <div>
                     <h2 className={`pt-5 ${formcss.form_text}`}>너도 아프냐 멍? 나도 아프다 냥!</h2>
@@ -51,7 +51,7 @@ function Form() {
                          <Calendar onDateSelect={handleDateSelect} />
 
                         {/* 폼태그 */}
-                        <div className={`d-flex flex-column align-items-center justify-content-center ${formcss.form_momdiv}`}>
+                        <div className={`col-6 d-flex flex-column align-items-center justify-content-center ${formcss.form_momdiv}`}>
                         <Formtage selectedDate={selectedDate} onFormDataChange={handleFormData} />
                        
                         </div>

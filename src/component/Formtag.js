@@ -268,7 +268,7 @@ function Form() {
           />
         </div>
         <div className={`d-flex align-items-center justify-content-center ${formcss.selectcount}`}>
-          <select className={`ms-auto ${formcss.for_input}`} id="serviceCount" name="w_service" onChange={handleChange}>
+          <select className={formcss.for_input} id="serviceCount" name="w_service" onChange={handleChange}>
             <option value="">필요서비스를 선택하세요</option>
             <option value="#산책">산책</option>
             <option value="#목욕">목욕</option>

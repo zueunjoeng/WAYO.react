@@ -20,11 +20,11 @@ function Popup() {
                 className={`fw-bold ${popup.clickableText}`}// 'styles'를 'popup'으로 변경
                 onClick={handleTextClick} // 클릭 이벤트 핸들러 추가
             >
-                <i className="bi bi-question-circle"></i> 집중케어 정기구독이란
+                <i className="bi bi-question-circle"></i>집중케어 정기구독이란 
             </p>
 
             {isPopupOpen && ( // 팝업이 열려 있을 때만 렌더링
-                <div className={`${popup.popup} d-flex justify-content-center align-items-center`} style={{ display: 'flex' }}>
+                <div className={`${popup.popup} d-flex justify-content-center align-items-center`}>
                     <div className={popup.popupContent}>
                         <span className={popup.close} onClick={handleClosePopup}>
                             <i className="bi bi-x-circle"></i>

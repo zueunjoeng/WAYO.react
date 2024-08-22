@@ -6,7 +6,7 @@
 
 .popup {
     position: absolute;
-    top: 20.5%;
+    bottom: 6%;
     left: 0;
     width: 36.875rem;
     height: 34.4375rem;
@@ -41,7 +41,9 @@
         font-size: 1rem;
     }
     .popup {
-        width: 450px;
+        width: 31rem;
+        bottom: 5.2%;
+        left: -2.5%;
     }
     .popupContent {
         width: 17.3125rem;
@@ -54,8 +56,9 @@
 
 @media (max-width: 992px) {
     .popup {
-        top: 20.3%;
-        width: 58.75rem;
+        width: 42rem;
+        bottom: 3%;
+        left: 12.3%;
     }
     .popupContent {
         width: 23.5625rem;
@@ -69,26 +72,22 @@
 
 @media (max-width: 768px) {
     .popup {
-        top: 19%;
-        width: 46.25rem;
+        left: -0.5%;
     }
 }
 
 @media (max-width: 576px) {
     .popup {
-        top: 49.3%;
-        bottom: 0;
-        width: 32.875rem;
-        height: 31.25rem;
+        width: 32.5rem;
+        bottom: 3.5%;
+        left: -4.5%;
     }
 }
 
 @media (max-width: 320px) {
     .popup {
-        top: 49.3%;
-        bottom: 0;
-        width: 18.75rem;
-        height: 31.25rem;
+        bottom: 3.3%;
+        width: 20rem;
     }
     .popupContent {
         width: 11.0625rem;
