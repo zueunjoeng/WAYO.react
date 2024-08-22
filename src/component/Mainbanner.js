@@ -14,10 +14,10 @@ const BannerSlider = () => {
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
             modules={[Autoplay, Pagination]}
-            autoplay={{
-                delay: 50000,
-                disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //     delay: 3000,
+            //     disableOnInteraction: false,
+            // }}
             pagination={{ clickable: true }} 
         >
             {mainbDB["banner01"].map((v, i) => {
@@ -26,14 +26,14 @@ const BannerSlider = () => {
     
                 return (
                     <SwiperSlide key={`banner01${i}`}>
-                        <div className='d-flex align-items-center justify-content-between'>
+                        <div className='d-flex align-items-center justify-content-between swiperdiv'>
                             <Mswiper>
                                 <div className="mb-4">
-                                    {subtextArray.length === 3 ? ( <img src="/img/main_collabo_txt.png" alt="콜라보로고" className='collabologo'/>) : null}
+                                    {i === 2 && subtextArray.length > 0 ? ( <img src="/img/main_collabo_txt.png" alt="콜라보로고" className='collabologo mb-3'/>) : null}
                                     <Ptext02>{textArray[0]}</Ptext02>
                                     <Ptext02>{textArray[1]}</Ptext02>
                                 </div>
-                                <div className="mb-5">
+                                <div className="mb-5 swipsubtext">
                                     <Ptext03>{subtextArray[0]}</Ptext03>
 
                                    {subtextArray.length === 2 ? (
@@ -65,7 +65,7 @@ const BannerSlider = () => {
                                                 allowFullScreen
                                             ></iframe>
                                         </div>
-                                    ) : i === 2 && subtextArray.length > 2 ? (
+                                    ) : i === 2 && subtextArray.length > 0 ? (
                                         <div className="maincollabo"> </div>
                                     ) : null}
                         </div>
