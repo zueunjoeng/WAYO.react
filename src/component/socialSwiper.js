@@ -7,8 +7,8 @@ import {Swieprdiv01,Swieprdiv02} from '../commonui/socialui'
 
 const Banner = () => {
     return (
-        <div className="col-6 d-flex p-0">
-            <Swiper className='jeSwiper'
+
+            <Swiper className='jeSwiper col-md-6 d-flex p-0 position-relative'
                 //spaceBetween={50}
                 slidesPerView={1}
                 // onSlideChange={() => console.log('slide change')}
@@ -39,9 +39,9 @@ const Banner = () => {
                 <div className="swiper-button-next"></div>
             </div>     
             </Swiper>
-            {/* <!-- 스와이퍼 이동버튼 --> */}
+
                                
-        </div>  
+
     );
 }
 

@@ -137,10 +137,33 @@
                .mainActing{
                 padding: 0.8rem;
             }
-            /* .mainActing{
-                display: none;
-            } */
             .hide-on-mobile {
                 display: none;
               }
+           }
+           @media (max-width: 320px) {
+            .mainActing{
+                display: none;
+            }
+            .main_back{
+                background-image: url('/public/img/mainback320.png');
+                width: 302px;
+                height: 220px;
+            } 
+            .maincollabo{
+                background-image: url('/public/img/main_collabo320.png');
+                height: 235px;
+                width: 280px;
+                margin-top: 20px;
+            }
+            .collabologo{
+                width: 190px;
+            }
+
+            .mainbanner_Video{
+                width: 300px;
+                height: 210px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
            }

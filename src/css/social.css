@@ -8,8 +8,9 @@
     .jeSwiper {
         font-family: Noto+Sans+KR;
         border-radius: 12px;
-        margin-right: 20px;
+        /* margin-right: 20px; */
         margin-bottom: 20px;
+        height: 39vh;
     }
 
     .swiperbutton{
@@ -37,6 +38,7 @@
     @media (max-width: 1200px) {
      .swiperimg img{
       width: calc(100% + 57vw);
+      transform: translateX(-30%) translateY(-30%)
       }
         .swiper-button-next,
         .swiper-button-prev {
@@ -47,9 +49,22 @@
      .container{
       max-width: none;
      }
-
+     .jeSwiper{
+      height: 41vh;
+     }
     }
     
+    @media (max-width: 768px) {
+      #social_program > .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      /* .jeSwiper {
+        height: 0;
+      } */
+    }
     @media (max-width: 768px) {
       .row{
         display: flex;
@@ -64,6 +79,10 @@
       }
     }
 
+
     @media (max-width: 320px) {
+      .jeSwiper {
+        height: 19.5vh;
+    }
 
     }

@@ -56,11 +56,13 @@ export const Swieprdiv01 = styled.div`
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5); /* 검정색에 투명도 조절 */
+        z-index: 1;
 `
 export const Swieprdiv02 = styled.div`
     position: absolute;
         left: 20px;
         bottom: 10px;
         color: white;
-        font-size: 1.45rem;        
+        font-size: 1.45rem;   
+        z-index: 1;
 `
