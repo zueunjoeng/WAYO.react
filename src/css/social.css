@@ -24,14 +24,19 @@
         font-size: 2rem;
         color: white;
     }
-
+    .swiperimg {
+      height: 100%;
+      overflow: hidden;
+    }
     .swiperimg img{
-      width: 100%;
+      width: calc(100% + 8vw);
+
+
     }
     
     @media (max-width: 1200px) {
      .swiperimg img{
-        width: calc(100% + 1vw);
+      width: calc(100% + 57vw);
       }
         .swiper-button-next,
         .swiper-button-prev {
@@ -42,7 +47,9 @@
      .container{
       max-width: none;
      }
+
     }
+    
     @media (max-width: 768px) {
       .row{
         display: flex;
@@ -50,8 +57,10 @@
         justify-content: center;
         align-items: center;
       }
-      .col-6{
-        width: 100%;
+      .col-6 {
+        flex: 0 0 auto;
+        width: 100%; 
+        max-width: 100%; 
       }
     }
 

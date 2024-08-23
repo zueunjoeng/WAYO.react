@@ -108,7 +108,7 @@
     
                 .main_back{
                    background-image: url('/public/img/mainback992.png');
-                   width: 430px;
+                   width: 405px;
                    height: 300px
                } 
                .maincollabo{
@@ -124,7 +124,8 @@
                .mainbanner_Video{
                    width: 490px;
                    height: 310px;
-                   margin-top: 20px;
+                   margin-top: 10px;
+                   margin-bottom: 10px;
                }
                .swipsubtext{
                 display: none;
@@ -134,9 +135,12 @@
                 text-align: center;
                }
                .mainActing{
-                border-radius: 30px;
-                padding: 1rem;
-                width: 200px;
-                height: 39px;
+                padding: 0.8rem;
             }
+            /* .mainActing{
+                display: none;
+            } */
+            .hide-on-mobile {
+                display: none;
+              }
            }

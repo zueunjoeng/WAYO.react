@@ -27,7 +27,7 @@ const Banner = () => {
                 {
                 socialDB["socialswiper"].map((v, i) => (
                     
-                    <SwiperSlide key={i}>
+                    <SwiperSlide key={i} className='swiperimg'>
                                 <Swieprdiv01></Swieprdiv01>
                                 <Swieprdiv02>{v.text}</Swieprdiv02>
                                 <img src={v.src} /> 

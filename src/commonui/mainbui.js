@@ -32,6 +32,7 @@ export const Ptext02 = styled.p`
     }
     @media (max-width: 768px) {
         font-size: 1.7rem;
+        line-height: 1.2rem;
     }
 `;
 

@@ -37,6 +37,9 @@ font-size: 1rem;
  &:hover{
     text-decoration: underline;
  }
+ @media (max-width: 320px){
+    font-size: 0.8rem;
+ }
 `
 export const Socialspan03 = styled.a`
 padding-right:1.5rem;
@@ -50,7 +53,7 @@ export const Swieprdiv01 = styled.div`
         position: absolute;
         top: 0;
         left: 0;
-        width: 700px;
+        width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5); /* 검정색에 투명도 조절 */
 `

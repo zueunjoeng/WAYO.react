@@ -41,12 +41,15 @@ const BannerSlider = () => {
                                     ? (<><Ptext03>{subtextArray[1]}</Ptext03> <Ptext03>{subtextArray[2]}</Ptext03></>) : null}
    
                                 </div>
-                                {v.btn ? (
-                                    <div>
-                                        <Link to={"javascript:void(0)"} className="mainActing">
-                                            {v.btn}
-                                        </Link>
-                                    </div>
+                             {v.btn ? (
+                                <div>
+                                    <Link
+                                    to={"javascript:void(0)"}
+                                    className={`mainActing ${ i === 2 ? "hide-on-mobile" : ""}`}
+                                    >
+                                    {v.btn}
+                                    </Link>
+                                </div>
                                 ) : null}
                             </Mswiper>
                             {i === 0 && textArray[0] ? (
