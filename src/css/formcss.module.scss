@@ -8,7 +8,8 @@
 
 .form_momdiv {
   line-height: 200%;
-  background-color: #F7F8FA;
+  // background-color: #F7F8FA;
+  background-color: black;
   padding: 1.25rem;
   border-radius: 1.25rem;
 }
@@ -16,46 +17,69 @@
 .form_box {
   border-radius: 0.5625rem;
   background-color: white;
-  margin: 0.75rem 0 0.75rem 0.5rem;
+  // margin: 0.75rem 0 0.75rem 0.5rem;
   padding: 0.3rem;
   display: flex;
   height: 3.125rem;
-  width: 18.375rem;
+  // width: 18.375rem;
+  flex: 1 1 45%;
+
 }
 
 .form_box_etc {
   border-radius: 0.5625rem;
   background-color: white;
-  margin: 0.75rem 0 0.75rem 0.5rem;
+  // margin: 0.75rem 0 0.75rem 0.5rem;
   padding: 0.3rem;
   display: flex;
   height: 3.125rem;
-  width: 37rem;
+  width: 100%;
+}
+
+.direction{
+  width: 100%;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+ padding-left: 0;
+  gap: 1rem;
 }
 
 .for_input {
   border: none;
+  font-size: 0.875rem;
 }
 
 .for_input_sele {
   border: none;
 }
 
-.addressinput {
-  width: 37rem;
-}
+// .addressinput {
+//   width: 37rem;
+// }
 
 .addressinput > .for_input {
   width: 28rem;
 }
+.addressinput{
+  border-radius: 0.5625rem;
+  background-color: white;
+  // margin: 0.75rem 0 0.75rem 0.5rem;
+  padding: 0.3rem;
+  display: flex;
+  height: 3.125rem;
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
 
 .bi {
   font-size: 1.25rem;
 }
 
 .forLabel {
-  margin-right: 1.25rem;
-  font-size: 0.9375rem;
+  // margin-right: 0.6rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
 }
 
 .hourSelect_text {
@@ -65,7 +89,7 @@
 
 .selectable {
   cursor: pointer;
-  width: 6.8125rem;
+  // width: 6.8125rem;
   height: 1.875rem;
   align-items: center !important;
   border-radius: 1.875rem;
@@ -127,16 +151,13 @@
 
 .zindex {
   z-index: 10;
-  margin-bottom: 1rem;
-}
-
-.calendar {
   padding: 1.25rem;
 }
 
-.main {
-  width: 33.75rem;
+.calendar{
+  max-width: 32rem;
 }
+
 
 .header {
   display: flex;
@@ -254,146 +275,33 @@
   color: white;
 }
 
-@media (max-width: 1200px) {
-  .form_tag>.container {
-      width: 68.75rem;
-  }
-  .zindex {
-      width: 30rem;
-      margin-right: auto;
-  }
-  .calendar, .main {
-      width: auto;
-  }
-  .form_momdiv {
-      width: 39.375rem;
-  }
-  .form_box {
-      margin: 0.75rem 0 0.75rem 0.8125rem;
-  }
-}
-
 @media (max-width: 992px) {
   .form_tag>.container {
-    width: 55.75rem;
+
 }
   .allbox {
-    flex-direction: column;
-      align-items: center;
+
   }
 
   .zindex {
-    margin-right: 0;
-    width: auto;
+
   }
   .calendar, .main {
-      width: 30rem;
+
   }
   .form_box, .form_box_etc {
-      margin: 0.1875rem 0 0.1875rem 0.1875rem;
-      padding: 0.3125rem;
-      width: 32.5rem;
+
   }
   .direction {
-      flex-direction: column;
+
   }
   .selectable {
-      width: 5.6rem;
+
   }
   .subbtn {
-      height: 2.1875rem;
+
   }
   .addressinput > .for_input {
-      width: 25rem;
-  }
-}
 
-@media (max-width: 768px) {
-  .form_tag>.container {
-    width: 41.75rem;
-}
-  .form_box, .form_box_etc {
-      margin: 0.1875rem 0 0.1875rem 0.1875rem;
-      padding: 0.5rem;
   }
-  .font {
-      font-size: 0.9375rem;
-  }
- 
-  .selectcount > .for_input {
-      display: block;
-      margin-left: 12.5rem;
-  }
-  .selectable {
-      display: none;
-  } 
-  .addressinput > .for_input {
-    width: 25rem;
-}
-
-}
-
-@media (max-width: 576px) {
-  .form_tag>.container {
-    width:  29.75rem;
-}
-  .form_text {
-      padding-top: 0.3125rem !important;
-  }
-  .form_momdiv {
-      width: 30rem;
-  }
-
-  .form_box, .form_box_etc {
-    margin: 0.1875rem 0 0.1875rem 0.1875rem;
-    padding: 0.5rem;
-    width: 22.5rem;
-}
-  .font {
-      font-size: 0.9375rem;
-  }
-  .selectcount > .for_input {
-    margin-left: 2.5rem;
-  }
-  .addressinput > .for_input {
-      width: 16rem;
-  }
-}
-
-@media (max-width: 320px) {
-  .form_tag>.container {
-      width: 18.75rem;
-  }
-
-  .form_text {
-      padding-top: 0.3125rem !important;
-  }
-
-  .calendar, .main {
-      width: 15rem;
-  }
-  .font {
-      font-size: 0.625rem;
-  }
-  .form_momdiv {
-      width: 17.5rem;
-  }
-  .form_box, .form_box_etc {
-      margin: 0.125rem 0 0.125rem 0.125rem;
-      padding: 0.3125rem;
-      width: 15.625rem;
-  }
-  .subbtn {
-      width: 13.75rem;
-  }
-  .direction, .form_box, .form_box_etc, .forLabel {
-      font-size: 0.625rem;
-  }
-  .forLabel {
-      margin-right: 0.3125rem;
-  }
-  .addressinput > .for_input {
-   width: 10rem;
-  }
-
 }
