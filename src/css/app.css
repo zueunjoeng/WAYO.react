@@ -46,13 +46,12 @@ section{font-family: Noto+Sans+KR;}
         .app_down {
             background-color: #FFFFFF;
             border-radius: 1.9rem;
-            width: 18.5rem;
-            height: 3.6rem;
             align-items: center;
             justify-content: center;
             text-decoration: none;
             font-size: 1.5rem;
             font-weight: bold;
+            padding: 0.8rem 3rem;
         }
        .container{
                 z-index: 1;
@@ -60,9 +59,8 @@ section{font-family: Noto+Sans+KR;}
         @media (max-width: 1200px) {
            
             #jeAppbanner {
-                justify-content: center;
+                justify-content: center !important;
                 text-align: center;
-                width: 43.8rem;
             }
             #app_download{
                 background-image: none;

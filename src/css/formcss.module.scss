@@ -315,12 +315,21 @@
     font-size: 0.7rem;
   }
   .addressinput > .for_input {
-    width: 18rem;
+    width: 12rem;
+  }
+  .font > p{
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 320px){
   .for_input, .forLabel, .for_input_sele,.for_input_info {
     font-size: 0.5rem;
+  }
+  .addressinput > .for_input {
+    width: 10rem;
+  }
+  .font > p{
+    font-size: 0.7rem;
   }
 }

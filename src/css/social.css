@@ -10,7 +10,7 @@
         border-radius: 12px;
         /* margin-right: 20px; */
         margin-bottom: 20px;
-        height: 39vh;
+        height: 28.5vh;
     }
 
     .swiperbutton{
@@ -49,9 +49,6 @@
      .container{
       max-width: none;
      }
-     .jeSwiper{
-      height: 41vh;
-     }
     }
     
     @media (max-width: 768px) {
@@ -61,9 +58,9 @@
         justify-content: center;
         align-items: center;
       }
-      /* .jeSwiper {
-        height: 0;
-      } */
+      .jeSwiper {
+        height: 25.5vh;
+      }
     }
     @media (max-width: 768px) {
       .row{
@@ -72,17 +69,21 @@
         justify-content: center;
         align-items: center;
       }
-      .col-6 {
-        flex: 0 0 auto;
-        width: 100%; 
-        max-width: 100%; 
+      .jeSwiper {
+        height: 18vh;
       }
     }
 
+    @media (max-width: 567px) {
+
+      .jeSwiper {
+        height: 15vh;
+      }
+    }
 
     @media (max-width: 320px) {
       .jeSwiper {
-        height: 19.5vh;
+        height: 10vh;
     }
 
     }

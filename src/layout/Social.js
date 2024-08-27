@@ -14,7 +14,7 @@ function Social() {
                         {/* <!-- Swiper --> */}
                         <Socialswiper></Socialswiper>                  
                     {/* <!-- 프로그램 일정 --> */}
-                    <div className="col-md-6 ps-0" >
+                    <div className="col-md-6 ps-3" >
                         <Socialdiv>
                             <h5 className="pt-1">프로그램 일정</h5>
                             <span className="pt-1"><a href="javascript:void(0)"><h6>더보기</h6></a></span>

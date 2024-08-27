@@ -55,10 +55,16 @@
     .fs_15 {
         font-size: 0.75rem;
     }
+    .bi{
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 320px) {
     .fs_15 {
         font-size: 0.4rem;
+    }
+    .bi{
+        font-size: 0.5rem;
     }
 }
