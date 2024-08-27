@@ -136,10 +136,10 @@ function Form() {
   return  (
     <form onSubmit={handleSubmit} className="d-flex flex-column justify-content-center align-items-center m-0 w-100">
     <ul className={`d-flex ${formcss.direction}`}>
-      <li className={`d-flex align-items-center ${formcss.form_box} col-md-6`}>
-        <label htmlFor="datepicker" className={`col-4 ${formcss.forLabel}`}>선택일자</label>
+      <li className={`d-flex align-items-center ${formcss.form_box} col-lg-6`}>
+        <label htmlFor="datepicker" className={`col-lg-4 ${formcss.forLabel}`}>선택일자</label>
         <input
-          className={` col-8 ${formcss.for_input_sele}`}
+          className={` col-lg-8 ${formcss.for_input_sele}`}
           type="text"
           id="datepicker"
           name="w_day"
@@ -148,7 +148,7 @@ function Form() {
           onChange={handleChange}
         />
       </li>
-      <li className={`d-flex align-items-center ${formcss.form_box} col-md-6`}>
+      <li className={`d-flex align-items-center ${formcss.form_box} col-lg-6`}>
         <label htmlFor="hourSelectStart" className={formcss.forLabel}>희망시간</label>
         <div className="d-flex">
         <select
@@ -200,10 +200,10 @@ function Form() {
     </ul>
 
     <ul className={`d-flex ${formcss.direction}`}>
-      <li className={`d-flex align-items-center ${formcss.form_box} col-md-6`}>
+      <li className={`d-flex align-items-center ${formcss.form_box} col-lg-6`}>
         <label htmlFor="petSelect" className={formcss.forLabel}>반려동물</label>
         <select
-          className={`ms-auto ${formcss.for_input}`}
+          className={formcss.for_input}
           id="petSelect"
           name="w_animaltype"
           placeholder="종류"
@@ -216,10 +216,10 @@ function Form() {
           <option value="a">모두</option>
         </select>
       </li>
-      <li className={`d-flex align-items-center ${formcss.form_box} col-md-6`}>
+      <li className={`d-flex align-items-center ${formcss.form_box} col-lg-6`}>
         <label htmlFor="petCount" className={formcss.forLabel}>반려동물 수</label>
         <select
-          className={`ms-auto ${formcss.for_input}`}
+          className={formcss.for_input}
           id="petCount"
           name="w_numberofpets"
           value={formData.w_numberofpets}
@@ -238,7 +238,7 @@ function Form() {
     <ul className={`${formcss.direction}`}>
       <li className={`d-flex align-items-center ${formcss.form_box_etc}`}>
         <label htmlFor="service" className={formcss.forLabel}>필요서비스</label>
-        <div className="d-flex align-items-center justify-content-center col-10" name="w_service">
+        <div className="d-flex align-items-center justify-content-center col-lg-10" name="w_service">
           <input
             type="button"
             value="#산책"
@@ -268,7 +268,7 @@ function Form() {
             onClick={() => toggleService('#돌봄', selectedServices, setSelectedServices, setFormData)}
           />
         </div>
-        <div className={`d-flex align-items-center justify-content-center ${formcss.selectcount}`}>
+      <div className={`d-flex align-items-center justify-content-center ${formcss.selectcount}`}>
           <select className={formcss.for_input} id="serviceCount" name="w_service" onChange={handleChange}>
             <option value="">필요서비스를 선택하세요</option>
             <option value="#산책">산책</option>
@@ -279,13 +279,13 @@ function Form() {
           </select>
         </div>
       </li>   
-      
+        
       <li className={`d-flex align-items-center ${formcss.addressinput}`}>
           <label htmlFor="sample5_address" className={`${formcss.forLabel} me-3`}>주소</label>
           <input
             type="text"
             id="sample5_address"
-            className={`me-3 ${formcss.for_input}`}
+            className={formcss.for_input}
             placeholder="상세주소도 함께 입력해주세요"
             value={address} // 주소 상태값
             onChange={(e) => {
@@ -306,10 +306,10 @@ function Form() {
  
 
     <ul className={`d-flex ${formcss.direction}`}>
-      <li className={`d-flex align-items-center ${formcss.form_box} col-md-6`}>
-        <label htmlFor="input5" className={`col-4 ${formcss.forLabel}`}>보호자</label>
+      <li className={`d-flex align-items-center ${formcss.form_box} col-lg-6`}>
+        <label htmlFor="input5" className={`col-lg-4 ${formcss.forLabel}`}>보호자</label>
         <input
-          className={`col-8 ${formcss.for_input}`}
+          className={`col-lg-8 ${formcss.for_input_info}`}
           type="text"
           id="input5"
           name="w_name"
@@ -318,10 +318,10 @@ function Form() {
           onChange={handleChange}
         />
       </li>
-      <li className={`d-flex align-items-center ${formcss.form_box} col-md-6`}>
-        <label htmlFor="input6" className={`col-4 ${formcss.forLabel}`}>연락처</label>
+      <li className={`d-flex align-items-center ${formcss.form_box} col-lg-6`}>
+        <label htmlFor="input6" className={`col-lg-4 ${formcss.forLabel}`}>연락처</label>
         <input
-          className={`col-8 ${formcss.for_input}`}
+          className={`col-lg-8 ${formcss.for_input_info}`}
           type="text"
           id="input6"
           name="w_ph"

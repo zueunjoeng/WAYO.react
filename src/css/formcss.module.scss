@@ -8,8 +8,7 @@
 
 .form_momdiv {
   line-height: 200%;
-  // background-color: #F7F8FA;
-  background-color: black;
+  background-color: #F7F8FA;
   padding: 1.25rem;
   border-radius: 1.25rem;
 }
@@ -17,11 +16,9 @@
 .form_box {
   border-radius: 0.5625rem;
   background-color: white;
-  // margin: 0.75rem 0 0.75rem 0.5rem;
   padding: 0.3rem;
   display: flex;
   height: 3.125rem;
-  // width: 18.375rem;
   flex: 1 1 45%;
 
 }
@@ -29,7 +26,6 @@
 .form_box_etc {
   border-radius: 0.5625rem;
   background-color: white;
-  // margin: 0.75rem 0 0.75rem 0.5rem;
   padding: 0.3rem;
   display: flex;
   height: 3.125rem;
@@ -51,19 +47,23 @@
 
 .for_input_sele {
   border: none;
+  font-size: 0.875rem;
+  width: 50%;
 }
 
-// .addressinput {
-//   width: 37rem;
-// }
+.for_input_info {
+  border: none;
+  font-size: 0.875rem;
+  width: 50%;
+}
+
 
 .addressinput > .for_input {
-  width: 28rem;
+  width: 100%;
 }
 .addressinput{
   border-radius: 0.5625rem;
   background-color: white;
-  // margin: 0.75rem 0 0.75rem 0.5rem;
   padding: 0.3rem;
   display: flex;
   height: 3.125rem;
@@ -77,19 +77,17 @@
 }
 
 .forLabel {
-  // margin-right: 0.6rem;
   font-size: 0.875rem;
   white-space: nowrap;
 }
 
 .hourSelect_text {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: bold;
 }
 
 .selectable {
   cursor: pointer;
-  // width: 6.8125rem;
   height: 1.875rem;
   align-items: center !important;
   border-radius: 1.875rem;
@@ -111,8 +109,8 @@
   background: #F7A4A5;
   padding: 0 1rem;
   border-radius: 3.125rem;
-  width: 18.75rem;
-  height: 3.75rem;
+  width: 75%;
+  height: 3.5rem;
   color: white;
 }
 
@@ -155,7 +153,7 @@
 }
 
 .calendar{
-  max-width: 32rem;
+  max-width: 80%;
 }
 
 
@@ -276,32 +274,53 @@
 }
 
 @media (max-width: 992px) {
-  .form_tag>.container {
-
-}
   .allbox {
-
-  }
-
-  .zindex {
-
-  }
-  .calendar, .main {
-
-  }
-  .form_box, .form_box_etc {
-
+    flex-direction: column;
+      align-items: center;
   }
   .direction {
-
+    flex-direction: column;
+  }
+  .selectcount > .for_input {
+    display: block;
   }
   .selectable {
-
+    display: none;
+  } 
+  .form_box, .form_box_etc{
+    justify-content: space-between;
   }
-  .subbtn {
+   .addressinput > .for_input {
+    width: 28rem;
+  }
+}
 
+@media (max-width: 768px) {
+  .zindex{
+   padding: 0.8rem;
+  }
+  .allbox {
+    padding: 0.7rem;
   }
   .addressinput > .for_input {
+    width: 24rem;
+  }
+}
 
+@media (max-width: 576px){
+  // .form_box, .form_box_etc{
+  //   justify-content: space-between;
+  // }
+  .for_input,.forLabel, .for_input_sele  {
+    font-size: 0.7rem;
+  }
+  .addressinput > .for_input {
+    width: 18rem;
+  }
+}
+
+@media (max-width: 320px){
+  .for_input, .forLabel, .for_input_sele,.for_input_info {
+    font-size: 0.5rem;
   }
 }

@@ -115,7 +115,7 @@ const Calendar = () => {
     }, []);
 
     return (
-        <div className={`${formcss.zindex} d-flex flex-column justify-content-center col-6`}>
+        <div className={`${formcss.zindex} d-flex flex-column align-items-center justify-content-center col-lg-6`}>
             <div className={`${formcss.calendar} d-flex flex-column justify-content-center align-items-center`}>
                 <div className={`d-flex justify-content-center ${formcss.header}`}>
                     <button className={`${formcss['nav-btn']} ${formcss['go-prev']}`} onClick={prevMonth}>&lt;</button>
