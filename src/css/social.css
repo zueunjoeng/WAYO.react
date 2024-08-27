@@ -10,7 +10,7 @@
         border-radius: 12px;
         /* margin-right: 20px; */
         margin-bottom: 20px;
-        height: 28.5vh;
+        height: 42.5vh;
     }
 
     .swiperbutton{
@@ -38,7 +38,7 @@
     @media (max-width: 1200px) {
      .swiperimg img{
       width: calc(100% + 57vw);
-      transform: translateX(-30%) translateY(-30%)
+      transform: translateX(-20%) translateY(-10%);
       }
         .swiper-button-next,
         .swiper-button-prev {
@@ -52,38 +52,31 @@
     }
     
     @media (max-width: 768px) {
-      #social_program > .row{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      .jeSwiper {
-        height: 25.5vh;
-      }
-    }
-    @media (max-width: 768px) {
       .row{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
       }
+      .swiperimg img{
+        transform: translateX(-20%) translateY(-20%);
+        }
       .jeSwiper {
-        height: 18vh;
+        height: 42.5vh;
+        width: 95vw;
       }
     }
 
     @media (max-width: 567px) {
 
       .jeSwiper {
-        height: 15vh;
+        height: 24.5vh;
       }
     }
 
     @media (max-width: 320px) {
       .jeSwiper {
-        height: 10vh;
+        height: 16.5vh;
     }
 
     }

@@ -26,7 +26,7 @@ const BannerSlider = () => {
     
                 return (
                     <SwiperSlide key={`banner01${i}`}>
-                        <div className='d-flex align-items-center justify-content-between swiperdiv'>
+                        <div className='d-flex align-items-center justify-content-around swiperdiv'>
                             <Mswiper>
                                 <div className="mb-4">
                                     {i === 2 && subtextArray.length > 0 ? ( <img src="/img/main_collabo_txt.png" alt="콜라보로고" className='collabologo mb-3'/>) : null}

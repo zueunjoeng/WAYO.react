@@ -82,7 +82,7 @@
 }
 
 .hourSelect_text {
-  font-size: 0.875rem;
+  font-size: 0.5rem;
   font-weight: bold;
 }
 
@@ -308,11 +308,8 @@
 }
 
 @media (max-width: 576px){
-  // .form_box, .form_box_etc{
-  //   justify-content: space-between;
-  // }
   .for_input,.forLabel, .for_input_sele  {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .addressinput > .for_input {
     width: 12rem;
@@ -324,12 +321,12 @@
 
 @media (max-width: 320px){
   .for_input, .forLabel, .for_input_sele,.for_input_info {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
   .addressinput > .for_input {
     width: 10rem;
   }
   .font > p{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }

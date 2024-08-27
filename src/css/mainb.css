@@ -17,23 +17,29 @@
             background-image: url('/public/img/mainback_animal.png');
             border: none;
             background-repeat: no-repeat;
+            background-size: contain;
             padding: 0;
             margin: 0;
-            margin-top: 30px;
-            width: 1000px;
-            height: 600px;
+            margin-top: 18px;
+            width: 70%;
+            height: 38rem;
             box-sizing: border-box;
+            background-position-x: calc(70% - 2px);
         }
+        
+
         .maincollabo{
             background-image: url('/public/img/main_collabo.png');
             border: none;
             background-repeat: no-repeat;
+            background-size: contain;
             padding: 0;
             margin: 0;
-            margin-top: 50px;
-            width: 800px;
-            height: 620px;
+            margin-top: 18px;
+            width: 55%;
+            height: 38rem;
             box-sizing: border-box;  
+            background-position-x: calc(55% - 2px);
         }
         .mainActing{
             text-decoration: none;
@@ -41,11 +47,13 @@
             background-color: #6A92FE;
             border-radius: 30px;
             padding: 1rem;
-            width: 300px;
-            height: 58px;
         }
+
         .mainbanner_Video{
             border-radius: 30px;
+            height: 38rem;
+            width: 50vw;
+            margin-top: 18px;
         }
         
         
@@ -60,22 +68,17 @@
             @media (max-width: 1200px) {
                  .main_back{
                     background-image: url('/public/img/mainback1200.png');
-                    height: 410px;
-                    width: 600px;
+                    height: 26rem;
                 } 
                 .maincollabo{
                     background-image: url('/public/img/main_collabo1200.png');
-                    height: 410px;
-                    width: 450px;
-                }
-                
-                .collabologo{
-                    width: 290px;
+                    height: 26rem;
+                    margin-top: 0;
                 }
 
                 .mainbanner_Video{
-                    width: 600px;
-                    height: 410px;
+                    width: 63vw;
+                    height: 26rem;
                     margin-top: 20px;
                 }
                 
@@ -85,45 +88,46 @@
     
                  .main_back{
                     background-image: url('/public/img/mainback992.png');
-                    width: 430px;
-                    height: 300px
+                    height: 25rem
                 } 
                 .maincollabo{
                     background-image: url('/public/img/main_collabo992.png');
-                    height: 403px;
-                    width: 420px;
-                    margin-top: 20px;
+                    height: 25rem;
                 }
+
                 .collabologo{
-                    width: 250px;
+                    width: 16rem;
                 }
 
                 .mainbanner_Video{
-                    width: 490px;
-                    height: 310px;
-                    margin-top: 20px;
+                    width: 34rem;
+                    height: 25rem;
+                }
+                .mainActing{
+                    padding: 0.7rem;
+                    font-size: 0.9rem;
                 }
             }
+
             @media (max-width: 768px) {
     
                 .main_back{
                    background-image: url('/public/img/mainback992.png');
-                   width: 405px;
-                   height: 300px
+                   height: 21.25rem;
+                   margin-top: 10px;
                } 
                .maincollabo{
                    background-image: url('/public/img/main_collabo768.png');
-                   height: 340px;
-                   width: 370px;
+                   height: 21.25rem;
                    margin-top: 20px;
                }
                .collabologo{
-                   width: 190px;
+                   width: 12rem;
                }
 
                .mainbanner_Video{
-                   width: 490px;
-                   height: 310px;
+                   width: 84vw;
+                   height: 21.25rem;
                    margin-top: 10px;
                    margin-bottom: 10px;
                }
@@ -135,34 +139,49 @@
                 text-align: center;
                }
                .mainActing{
-                padding: 0.8rem;
+                padding: 0.6rem;
+                }
+                .hide-on-mobile {
+                    display: none;
+                }
+                .swiper-pagination{
+                    display: none;
+                }
             }
-            .hide-on-mobile {
-                display: none;
-              }
-           }
+
+            @media (max-width: 568px) {
+                .mainActing{
+                    display: none;
+                }
+                .main_back{
+                    background-image: url('/public/img/mainback320.png');
+                    height: 16rem;
+                } 
+                .maincollabo{
+                    background-image: url('/public/img/main_collabo320.png');
+                    height: 16rem;
+                }
+                .collabologo{
+                    width: 11rem;
+                }
+    
+                .mainbanner_Video{
+                    height: 17rem;
+                    }
+               }
+
            @media (max-width: 320px) {
-            .mainActing{
-                display: none;
-            }
             .main_back{
-                background-image: url('/public/img/mainback320.png');
-                width: 302px;
-                height: 220px;
+                height: 9rem;
             } 
             .maincollabo{
-                background-image: url('/public/img/main_collabo320.png');
-                height: 235px;
-                width: 280px;
+                height: 9rem;
                 margin-top: 20px;
-            }
-            .collabologo{
-                width: 190px;
             }
 
             .mainbanner_Video{
-                width: 300px;
-                height: 210px;
+                width: 84vw;
+                height: 9rem;
                 margin-top: 20px;
                 margin-bottom: 10px;
             }

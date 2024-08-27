@@ -10,7 +10,7 @@ function Social() {
     <section id="social_program" className="margin">
             <div className="container">
                 <h2>사회 공헌 프로그램</h2>
-                <div className="row">
+                <div className="d-flex flex-column flex-md-row">
                         {/* <!-- Swiper --> */}
                         <Socialswiper></Socialswiper>                  
                     {/* <!-- 프로그램 일정 --> */}
