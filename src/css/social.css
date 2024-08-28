@@ -6,9 +6,7 @@
 
 
     .jeSwiper {
-        font-family: Noto+Sans+KR;
         border-radius: 12px;
-        /* margin-right: 20px; */
         margin-bottom: 20px;
         height: 42.5vh;
     }
