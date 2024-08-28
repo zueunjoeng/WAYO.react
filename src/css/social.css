@@ -8,7 +8,7 @@
     .jeSwiper {
         border-radius: 12px;
         margin-bottom: 20px;
-        height: 42.5vh;
+        height: 37.5vh;
     }
 
     .swiperbutton{
@@ -50,25 +50,19 @@
     }
     
     @media (max-width: 768px) {
-      .row{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
       .swiperimg img{
         transform: translateX(-20%) translateY(-20%);
         }
       .jeSwiper {
-        height: 42.5vh;
-        width: 95vw;
+        height: 32.5vh;
+        width: 92vw;
       }
     }
 
     @media (max-width: 567px) {
 
       .jeSwiper {
-        height: 24.5vh;
+        height: 20.5vh;
       }
     }
 

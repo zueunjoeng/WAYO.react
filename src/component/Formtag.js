@@ -55,10 +55,10 @@ function Form() {
         .insert([formData]);
   
       if (error) throw error;
-      alert('감사합니다. "예약 확정 확인 문자"가 전송될 예정입니다!');
+      alert('감사합니다. "예약 확인 문자"가 전송될 예정입니다!');
     } catch (error) {
       console.error('데이터 제출 중 오류 발생:', error.message);
-      alert('데이터 제출에 실패했습니다.');
+      alert('모든 정보를 입력해주세요.');
     }
   };
 
@@ -200,7 +200,7 @@ function Form() {
     </ul>
 
     <ul className={`d-flex ${formcss.direction}`}>
-      <li className={`d-flex align-items-center ${formcss.form_box} col-lg-6`}>
+      <li className={`d-flex align-items-center justify-content-between ${formcss.form_box} col-lg-6`}>
         <label htmlFor="petSelect" className={formcss.forLabel}>반려동물</label>
         <select
           className={formcss.for_input}
@@ -216,7 +216,7 @@ function Form() {
           <option value="a">모두</option>
         </select>
       </li>
-      <li className={`d-flex align-items-center ${formcss.form_box} col-lg-6`}>
+      <li className={`d-flex align-items-center justify-content-between ${formcss.form_box} col-lg-6`}>
         <label htmlFor="petCount" className={formcss.forLabel}>반려동물 수</label>
         <select
           className={formcss.for_input}
